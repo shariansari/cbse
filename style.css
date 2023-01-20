@@ -1,0 +1,2151 @@
+.head{
+    padding: 0 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand{
+    display: flex;
+    align-self: stretch;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+}
+header {
+    background-color: white;
+    box-shadow:0 0 2px rgb(0 0 0 / 68%);;
+}
+.btn{
+    padding: 10px 24px;
+    outline: none;
+    color: white;
+    background: #297CBA;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0%;
+}
+nav {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+}
+.signup{
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+.sigbtn{
+    border: 1px solid #297CBA;
+    outline: none;
+    background: transparent;
+    color: #297CBA;
+    padding: 6px 11px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+.vl {
+    border-left: 1px solid black;
+    height: 350px;
+  }
+  .telcon{
+    text-decoration: none;
+    color: inherit;
+    background: inherit;
+  }
+  .MoreHide{
+    box-shadow: 0 0 1px rgb(0 0 0 / 77%);
+    width: 630px;
+    display: block;
+    justify-content: space-between;
+    display: none;
+    position: absolute;
+    top: 65px;
+    z-index: 111111;
+    left: 30vw;
+    background: white;
+  }
+  .moreHov:hover  .MoreHide { display: flex; }
+
+@media screen and (max-width:950px){
+    .mobilescreen{
+        display:none !important;
+    }
+    .btnss{
+        display: none !important;
+    }
+    .head{
+        padding: 0 20px;
+    }
+    .con{
+        display: none !important;
+    }
+    .openbtn{
+        display: block !important;
+    }
+    .container-fluid {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+    .showCourses{
+        padding: 0 !important;
+    }
+}
+@media screen and (max-width:460px){
+.imag{
+    width: 130px !important;
+}
+.brand{
+    padding: 0px !important;
+}
+.head{
+    padding: 0 5px;
+}
+.telexp{
+    display: none !important;
+}
+.sigbtn{
+    padding: 3px 5px;
+border-radius: 3px;
+}
+.navbar{
+    padding: 0 !important;
+}
+}
+
+
+/* ////// */
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1200;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color:white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    height: 100vh;
+    box-shadow: 0px 8px 10px -5px rgb(0 0 0 / 20%), 0px 16px 24px 2px rgb(0 0 0 / 14%), 0px 6px 30px 3px rgb(0 0 0 / 0%);;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* .sidepanel a:hover {
+    color: #f1f1f1;
+  } */
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: -9px;
+    right: 11px;
+    font-size: 36px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color:white;
+    color:black;
+    padding: 10px 15px;
+    border: none;
+    border: 2px solid white;
+    display: none;
+  }
+  
+  /* .openbtn:hover {
+    background-color:#444;
+  } */
+
+
+  /* /// */
+  .courses{
+    background-color: yellow;
+    width: 900px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 77%);
+    display: flex;
+    position: absolute;
+    top: 84px;
+    z-index: 111111;
+    left: 50px;;
+    background: white;
+    display: none;
+  }
+  .showCourses:hover  .courses { display: flex; }
+
+  /* //acordion */
+  .accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+.accordion{
+    --bs-accordion-active-bg:none;
+    --bs-accordion-btn-focus-border-color:white !important;
+    --bs-accordion-btn-focus-box-shadow: 0px !important;
+}
+.acCourse{
+    display: flex;
+    border: 1px solid #f1eee8;
+    margin-bottom: 16px;
+    padding: 15px 3px;
+    border-radius: 5px;
+    background: white;
+}
+.banner{
+    background: url("/images/OfflinePgBnnr.png") no-repeat;
+    background-size: cover;
+    height: 380px;
+    background-position: center;
+    display: flex;
+    position: relative;
+}
+@media screen and (max-width:1055px) {
+.banner{
+    background-position: right;
+    background-repeat: repeat;
+    height: 316px;
+}
+.bannerTagline{
+    width: 52% !important;
+}
+}
+@media screen and (max-width:800px) {
+    .banner{
+        height: 300px;
+        background: url("/images/FrontBanner.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bannerTagline{
+        width: 70%;
+    }
+  
+    }     
+
+.bannerTagline{
+    color: #fff;
+    font-size: 37px;
+    margin-left: 10%;
+    margin-top: 7%;
+    width: 31%;
+    font-weight: 700;
+}
+@media screen and (max-width:598px) {
+    .banner{
+        height: 250px;
+    }
+    .bannerTagline{
+        width: 50% !important;
+        font-size: 29px !important;
+    }
+    }     
+    @media screen and (max-width:450px) {
+        .banner{
+            height: 204px;
+        }
+        .bannerTagline{
+            width: 250px !important;
+            font-size: 22px !important;
+        }
+        } 
+
+ .parentContainer{
+    
+        display: flex;
+        padding: 21px 12px;
+        justify-content: center;
+        transform: translateY(-90px);
+    
+ }
+ .cards{
+    width: calc(421px - 3%);
+    box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+    display: flex;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+ }
+ .leftCourseCard{
+    width: 50%;
+    padding: 10px 7px;
+    display: flex;
+    flex-direction: column;
+ }
+ .RightCourseCard{
+    display: flex;
+    width: 50%;
+    padding: 5px 0;
+    /* border: 1px solid orange; */
+    /* height: 218px; */
+}
+ 
+.classTitle{
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    font-weight: 700;
+}
+.subCon{
+    display: flex;
+    flex-wrap: wrap;
+}
+.firstCard{
+            
+            
+    box-shadow: 0 0 2px rgb(0 0 0 / 88%);
+    padding: 10px 7px;
+    margin: 5px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+
+        }
+
+
+  @media screen and (max-width:1196px){
+    .parentContainer{
+        display: flex;
+        padding: 21px 4px;
+    }
+    .cards{
+        width: calc(380px - 3%);
+
+    }
+    
+    
+  } 
+  @media screen and (max-width:1086px){
+  .parentContainer{
+    transform: translateY(-55px);
+    flex-wrap: wrap;
+  }
+  .cards{
+    width: 90%;
+    margin-bottom: 16px;
+    margin-right: 0;
+}
+.fill{
+    display: none !important;
+  }
+} 
+@media screen and (max-width:465px){
+    .parentContainer{
+        transform: translateY(-53px);
+    }
+    .cards{
+        width: 98%;
+        justify-content: flex-end;
+        position: relative;
+    }
+    }
+
+    .trendingBanner{
+        padding: 10px 75px;
+    }
+    .trandingBannerTrendingCourse{
+        font-family: "Lato";
+        font-weight: 700;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    .trendingBannerTitle{
+        color: gray;
+    padding: 10px 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    }
+    .trendingBanner-img{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+    .trendingBanner-img-f{
+        width: 49%;
+        height: 350px;
+        cursor: pointer;
+        
+
+    }
+    @media screen and (max-width:1200px) {
+      .inps{
+        width: 255px !important;
+      }
+    }
+
+@media screen and (max-width:966px) {
+    .getConnected{
+        padding: 9px 20px;
+    }
+    .ourlinks{
+        padding: 9px 20px !important;
+    }
+}
+
+
+@media screen and (max-width:875px) {
+    .getConnected{
+        padding: 9px 20px;
+        align-items: center;
+      
+    }
+    .normalfooterConnected{
+        font-size: 16px;
+    }
+    .ourlinks{
+        padding: 9px 25px !important;
+        flex-wrap: wrap !important;
+        display: grid !important;
+        grid-template-columns: auto auto auto !important;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+    .list1{
+        width: auto !important;
+    }
+    .list3{
+        width: auto !important;
+        padding-left: 161px !important;
+    }
+    .list4{
+        width: 100% !important;
+    }
+    .copyRight{
+        font-size: 16px !important;
+        padding: 10px !important;
+    }
+    }
+  
+        
+    
+
+@media screen and (max-width:835px) {
+    h2.call_back{
+
+        font-size: 27px !important;
+    }
+    .submitform{
+        width: 18%!important;
+    }
+    
+}
+@media screen and (max-width:800px) {
+    
+    .submitform{
+        width: 18%!important;
+    }
+ 
+    .submitform{
+        width: 19%!important;
+    }
+    .inps{
+        width: 170px!important;
+        max-width: 170px !important;
+    }
+    
+}
+
+
+
+@media screen and (max-width:675px) {
+    .callBackForm{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-inp{
+        width: 95% !important;
+        flex-direction: column;
+    }
+    .inps{
+        width: 95vw !important;
+        min-width: 95vw!important;
+    }
+    .submitform{
+        width: 50vw !important;
+    }
+    
+}
+@media screen and (max-width:620px){
+    .trendingBanner{
+        padding: 10px;
+    }
+    .trandingBannerTrendingCourse{
+        font-size: 20px;
+    }
+    .recordedVedio{
+        padding: 20px 10px !important;
+    }
+    .seocontent{
+        padding: 15px !important;
+        }
+        .footerPolicy{
+            display: grid !important;
+            grid-template-columns: auto auto !important;
+        }
+}
+@media screen and (max-width:575px) {
+    .modC{
+        width: 88% !important;
+    }
+}
+@media screen and (max-width:560px) {
+    .ifrm{
+        width: 80vw !important;
+    }
+    
+}
+@media screen and (max-width:545px) {
+    .getConnected{
+        padding: 9px 20px;
+        justify-content: center !important;
+    } 
+    .footerIcon{
+        margin: 0px!important;
+    }
+    .iconref{
+        margin: 10px !important;
+    }
+    .normalfooterConnected{
+        display: none!important;
+    }
+    }
+    .ourlinks{
+        padding: 9px 20px !important;
+        justify-content: center !important; 
+    }
+
+
+
+
+@media screen and (max-width:480px) {
+    .trendingBanner-img{
+        display: none;
+    }
+    .courseCardimg{
+        height: 103px !important;
+    }
+    .trandingBannerTrendingCourse{
+        text-align: center;
+    }
+    .container_Record{
+        padding-left: 0px !important;
+    }
+    .recordedVedio{
+     padding: 5px !important;
+    }
+    .result{
+        padding: 15px 5px !important;
+    }
+    .callBack{
+        padding: 20px 10px !important;
+        background: #fdfbfb;
+    }
+    .call_back{
+        font-size: 30px !important;
+    }
+    h2.call_back{
+
+        margin-bottom: 4px;
+        font-size: 24px;
+    }
+    .what{
+        font-size: 22px !important;
+        font-weight: 700 !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .ourlinks{
+        grid-template-columns: auto !important;
+    }
+    
+}
+@media screen and (max-width:368px){
+    .getConnected{
+        padding: 0px 2px;
+    justify-content: center;
+    }
+    .ourlinks{
+        padding: 0px 10px !important;
+        justify-content: center !important;
+    }
+    .copyRight{
+        padding: 10px 16px;
+        text-align: flex-start;
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .telcon{
+        display: none !important;
+    }
+}
+.recordedVedio{
+    padding: 70px 75px;
+    /* width: 100vw; */
+    
+}
+.reCVedioTitle{
+    font-size: 21px;
+    font-family: system-ui;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    padding-right: 44px;
+}
+.recVedioLEFT{
+    display: flex;
+    align-items: center;
+}
+.LIVOEver{
+    font-weight: 600;
+    padding: 3px 10px;
+    background: #297CBA;
+    color: white;
+    margin-right: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width:820px) {
+    .trendingBanner-img-f {
+        
+        height: unset !important;
+    
+}
+}
+.container_Record{
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+/* //slider */
+
+.responsive{
+    /* display: flex;
+    align-items: center;
+    justify-content: center !important;
+    width: 80vw;
+    padding: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.slick-prev{
+  left: -25px;
+  color: black !important;
+  
+}
+.slick-prev::before{
+    color: black !important;
+}
+.slick-next::before{
+    color: black !important;
+}
+.card{
+    border: 1px solid #e7e4e0;
+    /* width: 96% !important; */
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 5px;
+}
+.rcfloat{
+width: 50px;
+height: 50px;
+position: absolute;
+top: 20%;
+left: 42%;
+border-radius: 50%;
+overflow: hidden;
+cursor: pointer;
+}
+.rcfloat img{
+    width: 50px;
+    height: 50px;
+}
+.containerRecord{
+    position: absolute;
+    top: 16px;
+    color: white;
+    left: 13px;
+}
+.cardTit{
+    padding: 10px 0;
+    font-size: 21px;
+    margin: 0;
+}
+.cardPara{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-title{
+    color: #b9aeae;
+    font-size: 18px;
+}
+.vedioLeft{
+    width: 70%;
+}
+.vedioRight{
+    width: 30%;
+    /* border: 1px solid orange; */
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.vedioTxt{
+    line-height: 18px;
+    font-weight: 550;
+    margin-bottom: 10px;
+    font-size: 15px;
+    margin: 2px 0;
+    margin-bottom: 7px;
+}
+.vTime{
+    font-size: 16px;
+}
+.watch{
+    border-radius: 5px !important;
+    padding: 5px 7px !important;
+    cursor: pointer !important;
+    background: #297CBA !important;
+    color: white !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+}
+.result{
+    padding: 25px 75px;
+    display: flex;
+    flex-direction: column;
+}
+.resultBest{
+    background: #297cba;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 3px 10px;
+}
+.callBack{
+    padding: 50px 75px;
+    background: #fdfbfb
+}
+h2.call_back{
+    font-size: 36px;
+    margin-bottom: 15px !important;
+    font-weight: 700 !important;
+}
+.callBs{
+    color: #297CBA;
+    margin-right: 5px;
+}
+.callBackForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.submitform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16%;
+}
+.dd{
+    margin-top: 10px !important;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    min-width: 64px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: #fff;
+    background-color: #1976d2;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    width: 100%;
+}
+.ourEx{
+    margin-top: 11px;
+    color: gray;
+  
+}
+.studentTestimonial{
+        padding: 10px 75px;
+    
+    }
+    .what{
+        display: flex;
+        padding: 20px 0;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .studentsay{
+        margin: 0 10px;
+        color: #297CBA;
+    }
+
+    /* ////sudent */
+    .studentupper{
+        padding: 5px 10px;
+        /* order: 2; */
+        display: flex;
+        margin-bottom: 23px;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid;
+    
+    .studentCard{
+        display: flex;
+        width: 96%;
+        margin: 5px;
+        padding: 10px;
+        align-self: stretch;
+        height: 230px;
+        justify-content: space-between;
+        /* align-items: center; */
+        box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+        flex-direction: column;
+    }
+    .studentlower{
+        
+        display: flex;
+        padding-left: 11px;
+        align-items: center;
+    
+    }
+    .ingContainer{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .studentimg{
+        width: 51px;
+        margin-right: 10px;
+        overflow: hidden;
+        height: 51px;
+        border-radius: 50%;
+    }
+    .studentbtn{
+        margin-left: 21px;
+        padding: 3px 7px;
+        border-radius: 4px;
+        background: #297CBA;
+        color: white;
+    }
+    .teacherslider{
+        padding: 10px 75px;
+        
+    }
+    .rootcard{
+        padding: 10px 0;
+        display: flex;
+        width: 100%;
+    }
+    .commomTutorCard{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 8px 4px;
+        margin: 5px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F8F8F8;
+    }
+    .commomImgcon{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        /* margin-top: -74px; */
+    }
+    .tutorInfo{
+        padding: 3px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(1,32,43,.9);
+        color: white;
+        border-radius: 7px;
+    }
+    .Tutorinfo{
+        font-weight: 500;
+       
+        font-size: 17px;
+    }
+    .seocontent{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 75px;
+    }
+    .seoBox{
+        margin: 10px 0;
+    }
+    .seoTitle{
+        padding: 0;
+        font-weight: 400;
+        padding: 10px 0;
+        border-bottom: 1px solid antiquewhite;
+        margin-bottom: 9px;
+        padding-bottom: 6px;
+        font-size: 22px;
+    }
+    .seoContext{
+        font-size: 15px;
+    }
+    .normalFooter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 26px;
+        background-color: black;
+        color: white;
+    }
+    .getConnected{
+        width: 100%;
+    padding: 9px 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+    /* margin-bottom: 8px; */
+    border-bottom: 1px solid #262525;
+    }
+    .normalfooterConnected{
+        font-size: 18px;
+        font-weight: 550;
+        font-family: lato;
+        color: white;
+    }
+    .footerIcon{
+        display: flex;
+        margin-right: 10px;
+    }
+    .iconref{
+        text-decoration: none;
+        color: inherit;
+        margin-right: 20px;
+    }
+    .ourlinks{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        text-align: flex-start;
+        padding: 10px 75px;
+        border: 1px solid #282826;
+        border-right: none;
+        border-left: none;
+    }
+    .list1{
+        width: 25%;
+    }
+    h3.list1title{
+        margin-left: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    }
+    .listItem{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+        color: white;
+    }
+    .list_Links{
+        padding: 6px 0px;
+        font-size: 17px;
+        cursor: pointer;
+        text-decoration: none !important;
+        color: white;
+    }
+    .list2{
+        width: 30px;
+    }
+    .list3{
+        width: 20%;
+    padding-left: 30px;
+    }
+    .list4{
+        width: 25%;
+    }
+    .contactus{
+        margin-left: 0;
+        padding: 10px 0;
+    }
+    .home{
+        display: flex;
+    padding: 8px 0;
+    align-items: flex-start;
+    }
+    .add{
+        margin-left: 10px;
+        font-size: 17px;
+    }
+    .phone{
+        display: flex;
+    padding: 8px 0;
+    align-items: center;
+    }
+    .footerPolicy{
+        display: flex;
+    padding: 20px 10px;
+    border-bottom: 1px solid #2a2626;
+    border-top: 1px solid #2a2626;
+    width: 100%;
+    justify-content: space-evenly;
+    }
+    .Footer_OurPolicy{
+        text-decoration: none !important;
+        color: inherit;
+    }
+    .copyRight{
+        padding: 10px 0;
+        /* border: 1px solid orange; */
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+        /* margin-top: 25px; */
+        font-family: "Lato";
+
+        
+    }
+/* longterm */
+.LongTermdiv{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    padding: 20px 75px;
+    align-items: center;
+    margin-bottom: 50px;
+    background: linear-gradient(162deg, #297cba, rgba(131, 83, 12, 0.7019607843));
+}
+.LongLeft{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+h2.LongTitle{
+    font-size: 32px;
+    padding: 5px 0;
+}
+.LongSubtitle{
+    color: whitesmoke;
+    font-size: 19px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.LongLearnmore{
+    padding: 13px 0;
+    width: 40%;
+    
+}
+.bn{
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    font-weight: 700;
+}
+.LongTermCourses{
+    display: flex;
+    /* border: 1px solid orange; */
+    padding: 20px 75px;
+    flex-wrap: wrap;
+} 
+.CourseTitleLong{
+    padding: 6px 1px;
+    font-size: 26px;
+    width: 100%;
+    font-weight: 600 !important;
+}
+.courseDesc{
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: gray;
+    width: 84%;
+}
+.LongCourseCard ,.RecCourseCard{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.LogC{
+    width: 32%;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+    overflow: hidden;
+    margin: 5px;
+}
+.Lgcon{
+    display: flex;
+    flex-direction: column;
+}
+.LgImg{
+    height: 220px;
+    display: flex;
+}
+.LgBottom{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.LgBottomTitle{
+    padding: 5px 0;
+    margin: 0;
+    font-size: 22px;
+}
+.LgBottomClass{
+    color: gray;
+    padding: 3px 0;
+}
+.LgButton{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.RecomdedCourses{
+    width: 100%;
+    margin: 50px 0;
+}
+.RcBanner{
+    display: flex;
+    justify-content: space-between;
+    background: #297cba;
+    color: white;
+    width: 98%;
+    border-radius: 5px;
+    padding: 20px !important;
+    align-items: center;
+    height: 356px !important;
+}
+.RcLeft{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px; 
+}
+h2.RcTitleTag{
+    font-size: 32px;
+    padding: 5px 0;
+}
+.RcsubTitle{
+    color: whitesmoke;
+    font-size: 19px;
+}
+.Recheading{
+    padding-top:25px;
+}
+.Rectagline{
+    font-size: 36px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.bannerClass12th{
+    padding-left: 141px;
+}
+.courseDetailPage{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    /* border: 1px solid orange; */
+    /* margin-top: 30px; */
+    color: white;
+    width: 670px;
+    align-items: center;
+}
+.MakeTitle{
+    margin-top: 100px;
+}
+.point{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 25px;
+    width: 90%;
+}
+.points{
+    width: 48%;
+    display: flex;
+    align-items: center;
+}
+.couseDetailMiddle{
+    display: flex;
+    box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+    background: white;
+    margin: 0 75px;
+    padding: 14px;
+    border-radius: 5px;
+    transform: translateY(-50px);
+}
+.courseItem{
+    background: #54a3db;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 23%;
+    margin: 3px 5px;
+    border-radius: 5px;
+    padding: 15px;
+}
+.Firstimg{
+    width: 40px;
+    margin-right: 7px;
+}
+.Firstcon{
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.LowerCourse{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 75px;
+    align-items: center;
+}
+.classPageCard{
+    padding: 20px 75px;
+}
+.PageDiscription{
+    font-size: 20px;
+    padding: 10px;
+}
+.DetailPageCards{
+    width: 98%;
+    /* border: 1px solid orange; */
+    border-radius: 5px;
+    padding: 10px;
+    /* background: #fff0e9; */
+    /* color: white; */
+    margin-bottom: 25px;
+}
+.PageUpper{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color:#fff0e9; ;
+}
+.DetailLeft{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    order: 2;
+    margin-top: 50px;
+    /* background: white; */
+}
+.courseDetailLeftUpper{
+    margin-top: 11px;
+}
+.DetailRight{
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.courseName{
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.CouseDate{
+    display: flex;
+    align-items: flex-start;
+}
+.dateTarget{
+    display: flex;
+    padding: 5px 0;
+    margin-right: 15px;
+}
+.DateIcon{
+    width: 25px;
+    margin-right: 5px;
+}
+.DateText{
+    display: flex;
+    padding-top: 3px;
+}
+.TargetCr{
+    margin-right: 0;
+    margin-left: 15px
+}
+.TargetCr{
+    margin-right: 0;
+    margin-left: 15px;
+}
+.features{
+    margin-top: 5px;
+}
+.featur{
+    font-size: 20px;
+}
+.roundFeatures{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardshape{
+    background-color: white;
+    margin: 4px;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.Teachinglang{
+    display: flex;
+    align-items: center;
+}
+.techingtick{
+    display: flex;
+    margin-top: 2px;
+}
+.Teach{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.teachCont{
+    padding: 5px 0;
+}
+
+
+/* //policybanner */
+.PolicyBanner{
+    background: linear-gradient(to top,rgba(122,104,174,.2) 0,rgba(255,255,255,0) 70%);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 124px;
+    align-items: center;
+    /* padding-top: 26px; */
+    background: linear-gradient(162deg, #265df9, #83530cb3);
+    color: white;
+}
+h1.PBTitle{
+    font-size: 38px;
+}
+.PBcon{
+    padding: 20px 75px;
+}
+h1.PBBTitle{
+ 
+        text-align: center;
+        text-decoration: underline;
+        padding: 10px;
+   
+}
+.PBDesc{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+.PBDess{
+    margin-bottom: 10px;
+}
+.PBTagp{
+    padding-top: 24px;
+    font-size: 18px;
+    font-weight: 600; 
+}
+.PBLine{
+    margin-top: 12px;
+    margin-bottom: 9px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.PBDesq{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+.SED{
+    padding: 4px 5px
+}
+.DBcnf{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.DBemail{
+    font-weight: 600;
+}
+.fullemail{
+    color: blue;
+}
+hr{
+    opacity: 100;
+}
+/* //check */
+.sidepanel a {
+    padding:0px;
+    text-decoration: none;
+    font-size: unset;
+    color:black;
+    opacity: 1;
+    display: block;
+    transition: 0.3s;
+}
+.RcBanner{
+    height: 250px;
+    padding: 10px;
+}
+.Detailbtn{
+    width: auto !important;
+}
+.PBBTitle{
+    font-size: 27px ;
+}
+.pbIm{
+    height: 260px;
+}
+.AboutCard{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.aboutCardstart{
+    background: #297cba;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    border-radius: 4px;
+    width: 45%;
+    padding: 33px 20px !important;
+}
+.aboutTimestart{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.Timestart{
+    font-size: 46px;
+margin-bottom: 15px;
+font-weight: 700;
+}
+.TagStart{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+.AboutContained{
+    display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.AboutTCN{
+    background: #87d5ae;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 32%;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+margin: 15px 0;
+border-radius: 4px;
+}
+.CarrerCon{
+    padding: 20px 75px;
+} 
+.CarrerMSP{
+        display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+h2.careerMARKSMission{
+    position: relative;
+text-align: center;
+font-size: 32px;
+padding: 10px;
+}
+.careerLine{
+    width: 104px;
+    background: blue;
+    height: 1px;
+}
+.CarrerDesc{
+    padding: 20px;
+font-size: 20px;
+text-align: center;
+font-family: emoji;
+
+}
+.CareerCards{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 26px;
+}
+.CareerCR{
+    width: 43.5%;
+    box-shadow: 0 0 2px rgb(0 0 0 / 76%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    align-self: stretch;
+}
+.CarrerIMG{
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.careerTCR{
+    font-size: 20px;
+    font-weight: 700;
+}
+.CareerTitle{
+    padding: 8px;
+    font-weight: 600;
+} 
+.Apply{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: blue;
+    cursor: pointer;
+}
+.CarrerOURMission{
+    padding: 20px 75px;
+}
+.FaqContainer{
+    height: 300px;
+    width: 100%;
+    /* justify-content: center; */
+    text-align: center;
+}
+.FAQcon{
+    padding: 20px 75px;
+}
+h2.MOSTfreq{
+    font-size: 22px;
+    padding: 10px 7px;
+}
+/* //sitemap */
+.Sitemap {
+    display: flex;
+    width: 58%;
+    margin: auto;
+    flex-direction: column;
+    box-shadow: 0 0 1px rgb(0 0 0 / 77%);
+}
+h1.Sitemaptitle {
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+h1.Sitemaptitle {
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    background: blue;
+    background: #297cba;
+    color: white;
+    /* padding-top: 0; */
+    margin: 0;
+}
+.SiteMap_Container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+a.SitemapList {
+    font-size: 20px;
+    text-decoration: underline;
+    padding: 5px;
+    color: #59599d;
+    padding-left: 20px;
+}
+.SitempCreated {
+    display: flex;
+    padding: 5px;
+}
+a.website {
+    color: blue;
+    padding-left: 2px;
+}
+a.SitemapList:nth-child(even) {
+    background: #f0ede7;
+}
+
+
+/* /////// */
+.class_10th{
+    background-color: #297cba;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-right: 10px;
+    padding: 12px 35px;
+   
+    cursor: pointer;
+}
+
+.class_9th{
+    border: 1px solid #297CBA;
+    margin-right: 10px;
+    padding: 12px 35px;
+    color: black;
+    cursor: pointer;  
+}
+.responsiv .card ,.class9 .card{
+    height: 345px !important;
+}
+.SelectCoure .modal-header {
+   
+     
+        border-bottom:0px !important;
+}
+h3.SlectLayerTitle{
+    padding: 9px 5px;
+    margin: 0;
+    font-size: 21px;
+}
+.LyerOption{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+} 
+.SelectRound{
+    box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 6px;
+    cursor: pointer;
+}
+.SelctLayerOption{
+    display: flex;
+    flex-direction: column;
+}
+h3.SelectLayerTitle{
+    padding: 9px 5px;
+    margin: 0;
+    font-size: 21px !important;
+}
+.docolor{
+    background-color: #297cba !important;
+}
+/* .class9 .slick-track{
+    opacity: 1 !important;
+    width: 4367px !important;
+    transform: translate3d(-1588px ,0px ,0px) !important;
+} */
+
+/* .class9 .slick-track .card {
+    width: 387px !important;
+} */
+
+@media screen and (max-width:600px) {
+    .Sitemap{
+        width: 80%;
+    }
+}
+@media screen and (max-width:300px) {
+    .Sitemap{width: 90%;}
+}
+
+
+
+/* //media */
+@media screen and (max-width:1130px) {
+    .Longcou{
+        font-size: 20px !important;
+    }
+    .doColumn{
+        flex-direction: column;
+
+    }
+    
+}
+@media screen and (max-width:1100px){
+    .FAQcon{
+        padding: 15px 20px;
+    }
+    .CarrerOURMission{
+        padding: 20px;
+    }
+    .CareerCR{
+        width: 46.5%;
+        padding: 10px;
+    }
+    .CarrerCon{
+        padding: 20px;
+    }
+    .PBcon{
+        padding: 20px;
+    }
+    
+    .trendingBanner{
+        padding: 10px 20px;
+    }
+    .recordedVedio{
+        padding: 20px !important;
+    }
+    .slick-next::before {
+        display: none !important;
+    }
+    .slick-prev::before {
+        display: none !important;
+    }
+    .result{
+        padding: 25px 20px !important;
+    }
+    .callBack{
+        padding: 30px 20px !important;
+        background: #fdfbfb;
+        /* font-size: 30px !important; */
+    }
+    h2.call_back{
+
+        font-size: 30px !important;
+    }
+    .inps{
+        width: 200px !important;
+    }
+    .studentTestimonial{
+        padding: 10px 20px !important;
+    }
+    .teacherslider{
+        padding: 10px 20px !important;
+    }
+    .seocontent{
+        padding: 20px 25px !important;
+    }
+    .LongTermdiv{
+    padding: 20px;
+    margin-bottom: 40px;
+}
+ .LowerCourse{
+    padding: 2px 20px;
+ }
+.LongTermCourses{
+    padding: 20px !important;
+}
+.bannerClass12th{
+    background-position: right;
+    padding: 0;
+    background-position: -61px 0px !important;
+}
+.couseDetailMiddle{
+    margin: 0px 20px;
+}
+.classPageCard{
+    padding: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PolicyBanner{
+    padding: 30px 60px;
+}
+
+}
+  
+
+@media screen and (max-width:1015px) {
+
+     .Longcou{
+        font-size: 15px !important;
+    }
+    
+   
+}
+@media screen and (max-width:930px) {
+    .LongTermdiv{
+        padding: 20px 10px;
+        margin-bottom: 25px;
+        height: 320px; 
+    }
+    .LongRight img{
+        width:300px !important
+    }
+    .LongTermCourses{
+        padding: 20px 10px !important;
+    }
+    .RcBanner{
+        height: 320px;
+        padding: 10px;
+    }
+    .PageUpper{
+    justify-content: space-between;
+}
+    
+}
+@media screen and (max-width:895px) {
+    .bannerClass12th{
+    height: 300px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+.MakeTitle{
+    margin-top: 50px;
+}
+.couseDetailMiddle{
+    margin-top: 25px;
+}
+    }
+
+@media screen and (max-width:845px) {
+    .FaqContainer img {
+        height: 300px;
+    }
+    .LongTermdiv{
+        padding: 20px 10px;
+        margin-bottom: 25px;
+        height: 250px;
+    }
+    .FaqContainer{
+        height: 270px;
+    }
+    .LongTitle{
+        font-size: 26px !important;
+    }
+    .termcard{
+        width: 98% !important;
+    }
+    .doColumn{
+        flex-direction: row !important;
+
+    }
+    .Rectagline{
+        font-size: 22px !important;
+    }
+    }
+    @media screen and (max-width:820px) {
+        .careerImage{
+            display: none;
+        }
+        
+    }
+   
+    @media screen and (max-width:800px) {
+          .bannerClass12th{
+            background-position:  0px  !important;
+        }
+        .CarrerOURMission{
+            font-size: 18px;
+            padding: 20px 0;
+        }
+        
+    }
+    @media screen and (max-width:715px) {
+        .getConnected{
+            padding: 9px 20px;
+    
+        }
+        .ourlinks{
+          padding: 9px 20px !important;
+          grid-template-columns: auto auto !important;
+       
+        }
+        .list3{
+            padding-left: 0px !important;
+            padding-right: 80px !important;
+        }
+        .AboutCard{
+            flex-wrap: wrap;
+        }
+        .aboutCardstart{
+            padding: 18px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .AboutContained{
+            flex-wrap: wrap;
+        }
+        .AboutTCN{
+            width: 46%;
+            margin-right: 13px;
+        }
+    .LongRight img{
+           width: 230px !important;
+        
+    }
+    .couseDetailMiddle{
+        display: none;
+    }
+    .LowerCourse{
+        padding: 2px 10px;
+    }
+    .doFix{
+        font-size: 23px !important;
+        margin-left: unset;
+        padding: 10px 0px;
+    }
+.classPageCard{
+    padding: 10px !important;
+}
+.PageUpper{
+    flex-direction: column !important;
+    justify-content: space-between;
+}
+.DetailRight{
+    width: unset;
+}
+.courseDetailLeftUpper{
+    width: 90vw !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vc{
+    width: 80vw !important;
+}
+.FAQcon{
+    padding: 15px;
+}
+    }
+@media screen and (max-width:660px){
+    .FaqContainer img {
+        height: 215px !important;
+    }
+    .PolicyBanner{
+        padding: 16px 3px;
+        flex-direction: column !important;
+        
+    }
+    .PBTitle{
+        padding-top: 9px !important;
+        order: 1;
+    }
+    .RcBanner{
+        height: 239px;
+        padding: 10px 20px;
+    }
+    .PBImg img {
+        width: 280px !important;
+    }
+    .FaqContainer img {
+        height: 40px;
+    }
+}
+@media screen and (max-width:630px) {
+    .dd{
+        width:180px
+    }
+    .AboutTCN{
+        width: 100%;
+        margin-right: 0;
+    }
+    .CarrerCon{
+        padding: 20px 10px !important;
+    }
+     .CareerCR{
+        width: 47.5%;
+      
+    }
+    .CarrerOURMission{
+        
+        padding: 20px 10px;
+    }
+    .FaqContainer {
+        height: 240px;
+    }
+    }
+
+
+ @media screen and (max-width:520px) {
+    .LongTermdiv{
+        height: 220px !important;
+    }
+    .LongRight{
+        display: none;
+    }
+    .LongTitle{
+        font-size: 22px !important;
+    }
+    .CourseTitleLong{
+        padding:6px 1px !important;
+        font-size: 22px !important;
+        
+    }
+    .courseDesc{
+        width: 100% !important;
+    }
+    .RcBanner{
+      display: none !important;
+    }
+    
+ }
+
+ @media screen and (max-width:560px) {
+
+    .bannerClass12th{
+        height: 230px;
+    }
+    .MakeTitle{
+        margin-top: 0px !important;
+        padding: 10px;
+    }
+    .point{
+        padding: 7px;
+        margin-top: 0px;
+    }
+    .LowerCourse{
+        padding: 2px 5px;
+    }
+ }
+ @media screen and (max-width:505px) {
+    .classPageCard{
+        padding: 10px 5px !important;
+    }
+ }
+ @media screen and (max-width:460px) {
+       .CouseDate{
+        flex-direction: column !important;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .TargetCr{
+        margin: 0px !important;
+    }
+    .CareerCards{
+        align-items: center;
+    justify-content: center;
+    }
+    .CareerCR{
+        
+    width: 78.5%;
+
+    }
+ }
+ @media screen and (max-width:440px) {
+    .FaqContainer img {
+        height: 180px !important;
+    }
+    .bannerClass12th{
+        height: 220px !important;
+    }
+    .FaqContainer {
+        height: 200px;
+    }
+    .MakeTitle{
+    font-size: 18px;
+    }
+    .points{
+        width: 50%;
+    }
+    .point{
+        padding: 0px !important;
+    }
+       .doFix{
+        font-size: 18px !important;
+    }
+    .PageDiscription{
+        font-size: 17px !important;
+    }
+    .PBcon{
+        padding: 20px 10px !important;
+    }
+    .PBBTitle{
+        font-size: 22px ;
+    }
+ }
+ @media screen and (max-width:390px) {
+    .fixPoint{
+        font-size: 12px;
+    }
+    .FaqContainer{
+        height: 200px;
+    }
+ }
+ @media screen and (max-width:338px) {
+    .LongTermCourses{
+        padding: 20px 5px !important;
+    }
+    h2.MOSTfreq {
+        text-align: center;
+    }
+ }
+
+
+   
+    
+    
+
+
+
+
+
