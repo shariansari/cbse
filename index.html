@@ -711,10 +711,10 @@
       <!-- //tabs -->
       <div style="display: flex;">
         <div class="class_10th">
-          <div>10th class</div>
+          <div class="cls">10th Class</div>
         </div>
         <div class="class_9th">
-          <div>9th class</div>
+          <div class ="cls">9th Class</div>
         </div>
       </div>
       <!-- ///tabs -->
@@ -1180,12 +1180,16 @@
 
   <script>
     $(document).ready(function () {
+      Boards();
+  
 
+      function Boards (Def ="10th Class") {
+        console.log(Def,"hhh");
 
-
-
+   
+    
       async function test() {
-        const response = await fetch(" https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=10th%20Class");
+        const response = await fetch(` https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=${Def}`);
         const jason = await response.json();
         return jason;
 
@@ -1197,17 +1201,29 @@
         VedioClass10();
 
       });
-      async function play() {
-        const response = await fetch(" https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=9th%20Class");
-        const jason = await response.json();
-        return jason;
-      };
-      play().then((respo) => {
-        const vedio9 = respo;
-        localStorage.setItem("demovedios9", JSON.stringify(vedio9));
-        VedioClass9();
+    }
 
-      });
+    const Cls =document.querySelectorAll(".cls");
+    // console.log(Cls,"v");
+    Array.from(Cls).forEach((cLaSS)=>{
+      cLaSS.addEventListener("click", (e)=>{
+        let Default =e.target.innerHTML;
+        console.log(Default,"ff");
+        Boards(Default);
+      })
+    })
+
+    //   async function play() {
+    //     const response = await fetch(" https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=9th%20Class");
+    //     const jason = await response.json();
+    //     return jason;
+    //   };
+    //   play().then((respo) => {
+    //     const vedio9 = respo;
+    //     localStorage.setItem("demovedios9", JSON.stringify(vedio9));
+    //     VedioClass9();
+
+    //   });
 
     });
 
@@ -1326,14 +1342,7 @@
 
     });
 
-    $(document).ready(function () {
-      // $(".class9").show();
-      $(".class_9th").click(function () {
-        $(".class9").show();
-
-      })
-      $(".class9").hide();
-    });
+   
 
     async function VedioClass10() {
       const vedioCCCard = await JSON.parse(localStorage.getItem("demovedios"));
@@ -1403,8 +1412,8 @@
         ]
       });
       $(".class_10th").click(function () {
-        $(".class9").hide();
-        $(".responsive").show()
+        // alert("hello iam");
+        
         $(".class_10th").css({
           "background": "#297cba",
           "color": "#fff",
@@ -1428,6 +1437,35 @@
 
         });
       });
+       $(".class_9th").click(function () {
+      
+       
+
+
+        $(".class_9th").css({
+
+          "color": "#fff",
+          "font-weight": " 600",
+          "border": "none",
+          "border-radius": "4px",
+          "margin-right": "10px",
+          "margin-right": "10px",
+          "padding": "12px 35px",
+          "background-color": "#297bca",
+
+          " cursor": "pointer",
+        });
+        $(".class_10th").css({
+          "border": " 1px solid #297CBA",
+          " margin-right": "10px",
+          "padding": " 12px 35px",
+          "color": "black",
+          "cursor": "pointer",
+          "background-color": "white",
+
+        });
+      });
+
 
     }
 
@@ -1468,74 +1506,12 @@
       });
       // }
 
-      $('.class9').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-
-        ]
-      });
+    
 
 
-      $(".class_9th").click(function () {
-        $(".responsive").hide();
-        $(".class9").show();
-
-
-        $(".class_9th").css({
-
-          "color": "#fff",
-          "font-weight": " 600",
-          "border": "none",
-          "border-radius": "4px",
-          "margin-right": "10px",
-          "margin-right": "10px",
-          "padding": "12px 35px",
-          "background-color": "#297bca",
-
-          " cursor": "pointer",
-        });
-        $(".class_10th").css({
-          "border": " 1px solid #297CBA",
-          " margin-right": "10px",
-          "padding": " 12px 35px",
-          "color": "black",
-          "cursor": "pointer",
-          "background-color": "white",
-
-        });
-      });
-
+     
     }
 
-    // }
-    // })
     let watchs = document.querySelectorAll(".watch");
     Array.from(watchs).forEach((item) => {
       item.addEventListener("click", (e) => {
@@ -1803,6 +1779,7 @@
       })
     })
 
+ 
 
 
 
