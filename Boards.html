@@ -678,7 +678,7 @@
   <main>
     <div class="banner bannerClass12th" style="background-position: 1px -17px;">
       <div class="courseDetailPage">
-          <h2 class="MakeTitle">Online Classes For CBSE 12th Class Commerce</h2>
+          <h2 class="MakeTitle">Get Live Intereactive classes By Top Tutors</h2>
           <div class="point">
               <div class="points"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-check-circle-fill"></i></div><div  class="fixPoint" style="margin-left: 10px;">Live Classes</div></div>
               <div class="points"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-check-circle-fill"></i></div><div class="fixPoint" style="margin-left: 10px;">PDF Study Notes</div></div>
@@ -725,11 +725,10 @@
 </div>
 
 <div class="LowerCourse">
-  <div><h3 style="font-size: 27px;" class="doFix">12th Class Commerce</h3></div>
+  <div><h3 style="font-size: 27px;" class="doFix" ></h3></div>
 
 </div>
 <div class="classPageCard">
-  <div class="PageDiscription">Markschamp provides live Online Classes For CBSE 12th Class Commerce. Start Learning.CBSE Class 12 commerce live Online Coaching Classes with India's top tutors.</div>
  <div class="doclass12">
 
 </div>
@@ -791,20 +790,7 @@
 
       </div>
     </div>
-    <div class="seocontent">
-      <div class="seoBox">
-        <h3 class="seoTitle" style="font-weight: 700;">Get the best CBSE Class 12 Commerce Online Course by Markschamp</h3>
-        <div class="seoContext">Get the best CBSE Class 12 Commerce Online Course by Markschamp. Don't miss out on this amazing opportunity! We have CBSE online exam preparation classes for class 12th commerce, You have doubts about your exam preparation? You're a fresher and don't know where to start? We are here to help you from the beginning. Our team of CBSE Class 12 Commerce Online Course(Accounts+Economics+Business Studies) experts will guide you through the process of curriculum planning for the CBSE Board Exam. You can book the video classes according to your schedule to get a better knowledge of our classes. We provide CBSE Class 12 Commerce Online Course (Accounts+Economics+Business Studies) designed to prepare students for the best exams like School Leaving Diploma.</div>
-      </div>
-     
-     
-     
     
-     
-    
-    
-      
-    </div>
  
   </main>
   <footer>
@@ -977,23 +963,12 @@
 
   </script>
 
-  <!-- Optional JavaScrip for slider -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-  <!-- vediocards -->
   <script>
-    // async function test() {
-    //   const response = await fetch(" https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=10th%20Class");
-    //   const jason = await response.json();
-    //   return jason;
-
-    // }
-    // test().then((res) => {
-    //   console.log(res, "vvv")
-    //   const vedioDataCard = res;
+   
     // })
     const vedioCCCard = JSON.parse(localStorage.getItem("demovedios"))
-    // console.log(vedioCCCard, "vvvvvvvvvvvv");
+
 
     vedioCCCard.forEach((element, i) => {
 
@@ -1001,7 +976,7 @@
 
 
       const responsive = document.querySelector(".responsive");
-      // console.log(responsive);
+  
 
       const card = document.createElement("div");
       card.classList = "card";
@@ -1034,8 +1009,6 @@
     Array.from(watchs).forEach((item) => {
       item.addEventListener("click", (e) => {
 
-
-        // openModal();
 
 
       })
@@ -1072,7 +1045,7 @@
     }
 
   </script>
-  <!-- vediocards -->
+ 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -1082,7 +1055,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <!-- ////slider -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
@@ -1184,33 +1157,9 @@
 
 
     $(document).ready(function () {
-
-      // async function test() {
-      //   const response = await fetch(" https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=10th%20Class");
-      //   const jason = await response.json();
-      //   return jason;
-
-      // }
-      // test().then((res) => {
-      //   // console.log(res, "vvv")
-      //   const vedioDataCard = res;
-      //   localStorage.setItem("demovedios", JSON.stringify(vedioDataCard));
-
-      // })
-      // async function play() {
-      //   const response = await fetch(" https://api.markschamp.com/studentbasic/getCourseVideosDemo?classes=9th%20Class");
-      //   const jason = await response.json();
-      //   return jason;
-      // }
-      // play().then((respo) => {
-      //   const vedio9 = respo;
-      //   localStorage.setItem("demovedios9", JSON.stringify(vedio9));
-
-      // })
-//    const cLasses ="12th Class Science"
-     
-      async function Commerce12 () {
-        let cLasses =localStorage.getItem("SlelectedClass")
+        async function Commerce12 () {
+        let cLasses =localStorage.getItem("SlelectedClass");
+       $(".LowerCourse").children().html( `<div><h3 style="font-size: 27px;" class="doFix" >${cLasses}</h3></div>`); 
         const response =await fetch (` https://api.markschamp.com/CRMPanel/getCourses?classes=${cLasses}`);
         const jason = await response.json();
         return jason;
@@ -1225,10 +1174,10 @@
 
 
   </script>
-  <!-- class9 -->
+  
   <script>
     const vedioCCCard9 = JSON.parse(localStorage.getItem("demovedios9"))
-    //  console.log(vedioCCCard9,"vvvvvvvvvvvv");
+    
     vedioCCCard9.forEach((element) => {
 
 
@@ -1427,11 +1376,12 @@ function class12CommerceCbse (CourseClassas12Commerce) {
 
 
 
-console.log(CourseClassas12Commerce,"shariq");
+// console.log(CourseClassas12Commerce,"shariq");
 const doclass12 =document.querySelector(".doclass12");
-console.log(doclass12,"12class");
+// console.log(doclass12,"12class");
 const DetailPageCards =document.createElement("div");
 DetailPageCards.classList ="DetailPageCards";
+const CoURse =localStorage.getItem("SlelectedCourse")
 
 CourseClassas12Commerce.forEach((elm)=>{
 
@@ -1452,7 +1402,7 @@ const detailCourseData =`
           </div>
       </div>
       <div class="DetailRight">
-          <div class="courseName">${elm.courseTitle} ${elm.board}</div>
+          <div class="courseName">${elm.courseTitle} ${CoURse}</div>
           <div class="CouseDate">
               <div class="dateTarget">
                   <div class="DateIcon">
@@ -1494,6 +1444,9 @@ doclass12.appendChild(DetailPageCards);
 
 })
 }
+
+
+
   </script>
  
 
