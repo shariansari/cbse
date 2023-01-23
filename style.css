@@ -1705,6 +1705,277 @@ h3.SelectLayerTitle{
 .docolor{
     background-color: #297cba !important;
 }
+.CoursePageBanner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 75px;
+    background: linear-gradient(162deg, #265df9, rgba(131, 83, 12, 0.7019607843));
+}
+.CourseFBp{
+    display: flex;
+    align-items: flex-start;
+}
+.CourseLeft{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    color: white;
+    padding: 32px 10px;
+}
+.courseFBpTitle{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.courseIcon{
+    font-size: 25px;
+    font-weight: 700;
+}
+.courseTxt{
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 4px;
+    background: #FBC100;
+    font-weight: 600;
+}
+.CourseTitleV1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.CourseStart{
+    padding: 5px 0;
+    display: flex;
+}
+.CourseSt{
+    padding: 1px 0;
+    font-size: 17px;
+    border-right: 1px solid white;
+    padding-right: 3px;
+    margin-right: 7px;
+}
+.CourseGrp{
+    display: flex;
+    align-items: center;
+    padding: 10px 0; 
+}
+.GRPStd{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+.GRSJoin{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 19px;  
+}
+.Coursezp{
+    display: flex;
+    padding: 15px 0;
+} 
+.CoursezpBox{
+    padding: 10px;
+    margin-right: 7px;
+}
+.CoursezpUpper{
+    font-size: 20px;
+    font-weight: 600;
+}
+.FVPdl{
+    padding: 20px 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.Wrapper{
+ 
+    width: fit-content;
+    display: flex;
+}
+.Cdrleft{
+    width: 70% !important;
+    padding: 10px 35px 10px 20px; 
+}
+.CSSummary{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #cacaca;
+    width: 98%;
+}
+.CsTitle{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.CourseContent{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between
+}
+.ListCourseItem{
+    width: 47%;
+    display: flex;
+    margin-bottom: 11px;
+    padding: 4px;
+}
+.listTxt{
+    margin-left: 5px;
+}
+.keyPoints{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    padding: 15px 10px;
+    margin: 15px 0;
+    box-shadow: 0 0 2px rgb(0 0 0 / 88%);
+}
+.keyTitle{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.keycntr{
+    display: flex;
+    justify-content: space-between;
+}
+.kpCard{
+    display: flex;
+    padding: 5px;
+}
+.keyImg{
+    width: 50px;
+    display: flex;
+    margin-right: 6px;
+}
+.Descrption{
+    width: 85%;
+}
+.DevTitle{
+    padding: 10px 8px;
+    font-size: 17px;
+    font-weight: 600;
+    width: 85%;
+}
+.DevCTitle{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0; 
+}
+.DEVCListo{
+    padding-left: 10px;
+}
+.DEVBuilt{
+    padding: 4px;
+}
+.wePlo{
+    padding-left: 21px;
+}
+.CdrRight{
+    display: flex;
+    flex-direction: column; 
+    width: 350px;
+    padding: 17px 10px;
+    background: #fff;
+    box-shadow: 0 0 3px rgb(0 0 0 / 77%);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    right: 34px;
+}
+h3.SelectPlan{
+    margin-bottom: 11px;
+    padding: 5px 0;
+    font-size: 21px;
+}
+.Payment{
+    display: flex;
+    flex-direction: column;
+} 
+.PayCard{
+    border: 1px solid #dddbdb;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 8px 10px;
+    justify-content: space-between;
+}
+.AmtLeft{
+    border: 1px solid green;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+.AmountPayright{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.Amppl{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.Delamt{
+    display: flex;
+}
+.Payamtbtn{
+    padding: 10px;
+}
+.FtUpper{
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    color: #fff;
+    align-items: center;
+} 
+.FeaturesDev{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 75px;
+    position: relative;
+    justify-content: space-between;
+}
+.FtCards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Ftplus{
+    border: 1px solid #d9d8d7;
+    width: 48%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+.FTImg{
+    text-align: center;
+    justify-content: center;
+    padding: 4px;
+    width: 67px;
+}
+h2.FTTitle{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px;
+}
+.FTDes{
+    padding: 6px 15px;
+}
+
+
+
 /* .class9 .slick-track{
     opacity: 1 !important;
     width: 4367px !important;

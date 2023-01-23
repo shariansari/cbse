@@ -1762,9 +1762,20 @@
     // $(".SelectRound").css({"background":"white"})
     let Coursebtns = document.querySelectorAll(".classSelect");
     // console.log(Coursebtns,"bbbbbbb");
-    Array.from(Coursebtns).forEach((butoon) => {
+    
+    Array.from(Coursebtns).forEach((butoon,index) => {
       butoon.addEventListener('click', (e) => {
-        butoon.classList.toggle("docolor");
+        // butoon.classList.toggle("docolor");
+        localStorage.setItem("Indices",index);
+        
+      
+    
+      ( index == localStorage.getItem("Indices")) ?
+     
+       ( butoon.classList.add("docolor"))
+      :
+        butoon.classList.remove("docolor");
+      
         let SlectedClass = e.target.innerHTML;
 
         localStorage.setItem("SlelectedClass", SlectedClass);
