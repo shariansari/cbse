@@ -1975,6 +1975,27 @@ h2.FTTitle{
 }
 
 
+.SMBnb{
+    display: none;
+}
+.UBNBTitle{
+    font-size: 21px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+.DEVBus{
+    display: flex;
+    align-items: center;
+}
+.UBNBSub{
+    margin-right: 7px; 
+}
+.UBNyear{
+    font-size: 18px; 
+    
+}
+
+
 
 /* .class9 .slick-track{
     opacity: 1 !important;
@@ -2009,6 +2030,34 @@ h2.FTTitle{
     
 }
 @media screen and (max-width:1100px){
+    .BuyCourse{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+        padding: 7px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: #fff;
+        z-index: 111;
+    }
+    .CdrRight{
+        display: none;
+    }
+    .Cdrleft{
+        width: 100% !important;
+        align-items: center;
+        padding: 10px 70px;
+    }
+    .Wrapper{
+        padding: 0;
+    }
+    .CoursePageBanner{
+        padding: 0 20px;
+    }
     .FAQcon{
         padding: 15px 20px;
     }
@@ -2123,6 +2172,19 @@ h2.FTTitle{
 }
     
 }
+@media screen and (max-width:920px) {
+    .Cdrleft{
+        padding: 10px;
+    }
+    .CSSummary{
+        padding: 0;
+    }
+    .CsTitle{
+        font-size: 25px;
+    margin: 0;
+    padding: 7px;
+    }
+}
 @media screen and (max-width:895px) {
     .bannerClass12th{
     height: 300px !important;
@@ -2181,7 +2243,40 @@ h2.FTTitle{
         }
         
     }
+    @media screen and (max-width:790px) {
+        .CourseFBp{
+            display: flex;
+            justify-content: center;
+        }
+        .CourseLeft{
+            padding: 12px 10px;
+            width: 522px;
+        }
+        }
+        
+    
     @media screen and (max-width:715px) {
+        .Descrption{
+            width: 100% !important;
+        }
+        .keyPoints{
+            width: 100% !important;
+        }
+        .ListCourseItem{
+            width: 49% !important;
+        }
+        .CsTitle{
+            font-size: 20px;
+            margin-bottom: 0;
+            padding: 3px 7px;
+        }
+        }
+         .CSSummary{
+            width: 100% !important;
+        }
+        .en{
+            width: unset !important;
+        }
         .getConnected{
             padding: 9px 20px;
     
@@ -2247,8 +2342,29 @@ h2.FTTitle{
 .FAQcon{
     padding: 15px;
 }
-    }
+    
 @media screen and (max-width:660px){
+    .UBNBSub{
+        font-size: 19px;
+    }
+    .UBNBTitle{
+        display: none !important;
+    }
+    .SMBnb{
+        display: flex;
+        font-size: 20px;
+        font-weight: 700;
+    } 
+    }
+    .BuyCourse{
+        box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+        padding: 5px 10px;
+    }
+    .keyImg{
+        width: 30px;
+        display: flex;
+        margin-right: 6px;
+    }
     .FaqContainer img {
         height: 215px !important;
     }
@@ -2271,7 +2387,7 @@ h2.FTTitle{
     .FaqContainer img {
         height: 40px;
     }
-}
+
 @media screen and (max-width:630px) {
     .dd{
         width:180px
@@ -2295,7 +2411,49 @@ h2.FTTitle{
         height: 240px;
     }
     }
-
+@media screen and (max-width:570px) {
+    .kpCard{
+        width: 50% !important;
+    }
+    .keycntr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .CoursePageBanner{
+     padding: 0 10px;
+    }
+    .CourseTitleV1{
+        font-size: 22px;
+    }
+    .CourseGrp{
+        display: flex;
+        align-items: center;
+        padding: 4px 0;
+    } 
+    .Coursezp{
+        display: flex;
+        padding: 3px 0;
+    }
+    }
+    @media screen and (max-width:545px) {
+        .DevTitle{
+            width: 100% !important;
+        }
+        .ListCourseItem{
+            width: 100% !important;
+        }
+        .FVPdl{
+            width: 100% !important;
+        }
+        .Wrapper{
+            width: 100% !important;
+        }
+            .Cdrleft{
+          width: 100% !important;
+        }
+        
+    }
 
  @media screen and (max-width:520px) {
     .LongTermdiv{
@@ -2363,6 +2521,21 @@ h2.FTTitle{
     }
  }
  @media screen and (max-width:440px) {
+    .UBNyear{
+        font-size: 17px;
+    }
+    .SMBnb{
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+    } 
+    .KpCsubTitle{
+        font-size: 14px !important;
+    }
+    .kpCard{
+        width: 50% !important;
+        margin: 5px 0;
+    }
     .FaqContainer img {
         height: 180px !important;
     }
@@ -2394,6 +2567,18 @@ h2.FTTitle{
         font-size: 22px ;
     }
  }
+ @media screen and (max-width:435px) {
+    .CoursePageBanner{
+        padding: 0px;
+       }
+       .CourseTitleV1{
+        font-size: 20px;
+    }
+    .CourseStart{
+        word-break: break-word;
+    }
+    
+ }
  @media screen and (max-width:390px) {
     .fixPoint{
         font-size: 12px;
@@ -2409,7 +2594,26 @@ h2.FTTitle{
     h2.MOSTfreq {
         text-align: center;
     }
- }
+    .CsTitle{
+        font-size: 19px !important;
+    }
+     .DevTitle{
+        padding: 10px 8px;
+        font-size: 16px;
+    }
+    .BuyCourse{
+        box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+        padding: 5px 6px;
+    }
+    .SMBnb{
+        display: flex;
+        font-size: 15px;
+    }
+    .UBNBSub{
+        font-size: 18px;
+    }
+    }
+ 
 
 
    
