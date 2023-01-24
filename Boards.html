@@ -15,7 +15,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato&family=Merienda:wght@300&family=Permanent+Marker&display=swap"
     rel="stylesheet">
-
   <!-- slick slider -->
 
   <!-- slider -->
@@ -810,13 +809,14 @@
         <form>
           <div class="form-group">
            <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name"></div>
-            
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name">
+          </div>
+            <div style="color: red;margin-left: 22px;font-size: 13px;" class="NameTAr"></div>
           </div>
           <div class="form-group">
             <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-telephone-fill" style="font-size: 18px; color: #297CBA;"></i></label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your phone number."></div>
-             
+             <input type="number" maxlength="10" class="form-control" id="exampleFormControlInput2" placeholder="Enter your phone number."></div>
+             <div style="color: red;margin-left: 22px; font-size: 13px;" class="NumberTAr"></div>
            </div>
           
           <div class="form-group">
@@ -839,7 +839,7 @@
       </div>
       <div class="modal-footer" style="border: 0px;display: flex;align-items: center;justify-content: center;">
         <button type="button" class="btn dd" data-dismiss="modal" style="background-color: rgb(165, 143, 150);width: unset;">Close</button>
-        <button type="button" class="btn dd " style="width: unset;">Submit</button>
+        <button type="submit" class="btn dd sub" style="width: unset;">Submit</button>
       </div>
     </div>
   </div>
@@ -1113,6 +1113,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
 
     $('.responsive').slick({
@@ -1210,16 +1212,18 @@
 
 
     $(document).ready(function () {
-        async function Commerce12 () {
+        async function ByBoards () {
         let cLasses =localStorage.getItem("SlelectedClass");
        $(".LowerCourse").children().html( `<div><h3 style="font-size: 27px;" class="doFix" >${cLasses}</h3></div>`); 
-        const response =await fetch (` https://api.markschamp.com/CRMPanel/getCourses?classes= ${cLasses}`);
+        const response =await fetch (` https://api.markschamp.com/CRMPanel/getCourses?classes=${cLasses}`);
         const jason = await response.json();
         return jason;
       }
-      Commerce12().then((respons)=>{
-        const course12commerce = respons;
-        class12CommerceCbse(course12commerce);
+      ByBoards().then((respons)=>{
+        const BoardsCards = respons;
+        localStorage.setItem("courses", JSON.stringify(BoardsCards));
+
+        BoardsByCard(BoardsCards);
 
       })
 
@@ -1229,83 +1233,13 @@
   </script>
   
   <script>
-    // const vedioCCCard9 = JSON.parse(localStorage.getItem("demovedios9"))
-    
-    // vedioCCCard9.forEach((element) => {
-
-
-
-
-
-    //   const doclass9 = document.querySelector(".class9");
-    //   // console.log(doclass9,"class9");
-    //   const card9 = document.createElement("div");
-    //   card9.classList = "card";
-    //   const class9data = `
-    //   <img class="card-img-top" src="/images/videoBackground.jpg" alt="Card image cap">
-    //               <div class="card-body">
-    //                 <div class="rcfloat">
-    //                   <img src="/images/videoIcon.png" alt="" >
-    //                 </div>
-    //                 <div class="containerRecord">
-    //                   <h3 class="cardTit">${element.classes}</h3>
-    //                   <p class="cardPara">${element.tutorName}</p>
-    //                 </div>
-    //                 <div class="card-title">${element.subject}</div>
-    //                <div class="vedioTime" style="display: flex;">
-    //                 <div class="vedioLeft">
-    //                   <div class="vedioTxt">${element.topicName}</div>
-    //                   <div class="vTmie">${element.videosLink}</div>
-    //                 </div>
-    //                 <div class="vedioRight">
-    //                 <a href="#" class="btn btn-primary watch" data-toggle="modal" data-target="${'#exampleModal' + element.id}" onclick="openModal('${element.demolinksvideos}','${element.id}','${element.topicName}')">Watch </a></div>
-    //               </div>
-    //               </div>`
-    //   card9.innerHTML += class9data;
-    //   doclass9.appendChild(card9);
-    // })
-
-    $('.class9').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-
-      ]
-    });
+   
+  
 
 
 
   </script>
-  <!-- class9 -->
-
-  <!-- modla -->
-  <!-- student slider -->
+ 
   <script>
     const StudentStories = [
       {
@@ -1425,7 +1359,7 @@
    
 
 ///12classccourse card
-function class12CommerceCbse (CourseClassas12Commerce) {
+function BoardsByCard (BoardData) {
 
 
 
@@ -1436,7 +1370,9 @@ const DetailPageCards =document.createElement("div");
 DetailPageCards.classList ="DetailPageCards";
 const CoURse =localStorage.getItem("SlelectedCourse")
 
-CourseClassas12Commerce.forEach((elm)=>{
+
+BoardData.forEach((elm)=>{
+  elm.addEventListener
 
 
 
@@ -1497,7 +1433,46 @@ doclass12.appendChild(DetailPageCards);
 
 })
 }
+$(".sub").click(function(){
+  
+ let Name = $("#exampleFormControlInput1").val()
+ let Phoneno =$("#exampleFormControlInput2").val();
+ let ClassesBook =$("#exampleFormControlSelect1").val();
 
+ if(Name === "" ||Phoneno ===""){
+  $(".NameTAr").html("Fields Can't be empty *")
+    $(".NumberTAr").html("Fields Can't be empty *")
+          
+  setTimeout(() => {
+    $(".NameTAr").html("")
+    $(".NumberTAr").html("")
+        }, 2500);
+
+ }
+ if(Phoneno.length!=10){
+  $(".NumberTAr").html("Please Enter Valid no *")
+  setTimeout(() => {
+    $(".NameTAr").html("")
+    $(".NumberTAr").html("")
+        }, 2500);
+ }
+
+ 
+const param =new URLSearchParams()
+param.append("studentsName",`${Name}`);
+param.append("phoneNo",`${Phoneno}`);
+param.append("classes",`${ClassesBook}`);
+
+
+axios.post('https://api.markschamp.com//studentbasic/bookFreeDemo',param)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+})
 
 
   </script>

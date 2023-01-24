@@ -711,7 +711,7 @@
                         <div class="CoursezpLower">Performace tracking App</div>
                     </div>
                 </div>
-                    <button class="btn dd en" style="background-color: #FBC100;width: 250px;">Enroll now</button>
+                    <button class="btn dd en" style="background-color: #FBC100;width: 250px !important;">Enroll now</button>
                 </div>
             </div>
         </div>
@@ -773,7 +773,7 @@
             <div class="DEVBuilt">•Classes from India's Top Educators with proven success records.</div>
             <div class="DEVBuilt">•Replay the recorded class if you missed any day.</div>
             <div class="wePlo">
-              <div>description</div>
+              <div style="font-size: 15px;">description</div>
             </div>
           </div>
         </div>
@@ -1199,63 +1199,63 @@
   <script>
    
     // })
-    const vedioCCCard = JSON.parse(localStorage.getItem("demovedios"))
+    // const vedioCCCard = JSON.parse(localStorage.getItem("demovedios"))
 
 
-    vedioCCCard.forEach((element, i) => {
+    // vedioCCCard.forEach((element, i) => {
 
 
 
 
-      const responsive = document.querySelector(".responsive");
+    //   const responsive = document.querySelector(".responsive");
   
 
-      const card = document.createElement("div");
-      card.classList = "card";
-      const vedioCard = `
-      <img class="card-img-top" src="/images/videoBackground.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <div class="rcfloat">
-                      <img src="/images/videoIcon.png" alt="" >
-                    </div>
-                    <div class="containerRecord">
-                      <h3 class="cardTit">${element.classes}</h3>
-                      <p class="cardPara">${element.tutorName}</p>
-                    </div>
-                    <div class="card-title">${element.subject}</div>
-                   <div class="vedioTime" style="display: flex;">
-                    <div class="vedioLeft">
-                      <div class="vedioTxt">${element.topicName}</div>
-                      <div class="vTmie">${element.videosLink}</div>
-                    </div>
-                    <div class="vedioRight">
-                    <a href="#" class="btn btn-primary watch" data-toggle="modal" data-target="${'#exampleModal' + element.id}" onclick="openModal('${element.demolinksvideos}','${element.id}','${element.topicName}')">Watch </a></div>
-                  </div>
-                  </div>`
+    //   const card = document.createElement("div");
+    //   card.classList = "card";
+    //   const vedioCard = `
+    //   <img class="card-img-top" src="/images/videoBackground.jpg" alt="Card image cap">
+    //               <div class="card-body">
+    //                 <div class="rcfloat">
+    //                   <img src="/images/videoIcon.png" alt="" >
+    //                 </div>
+    //                 <div class="containerRecord">
+    //                   <h3 class="cardTit">${element.classes}</h3>
+    //                   <p class="cardPara">${element.tutorName}</p>
+    //                 </div>
+    //                 <div class="card-title">${element.subject}</div>
+    //                <div class="vedioTime" style="display: flex;">
+    //                 <div class="vedioLeft">
+    //                   <div class="vedioTxt">${element.topicName}</div>
+    //                   <div class="vTmie">${element.videosLink}</div>
+    //                 </div>
+    //                 <div class="vedioRight">
+    //                 <a href="#" class="btn btn-primary watch" data-toggle="modal" data-target="${'#exampleModal' + element.id}" onclick="openModal('${element.demolinksvideos}','${element.id}','${element.topicName}')">Watch </a></div>
+    //               </div>
+    //               </div>`
 
-      card.innerHTML += vedioCard;
-      responsive.appendChild(card);
-    });
+    //   card.innerHTML += vedioCard;
+    //   responsive.appendChild(card);
+    // });
+    // // })
+    // let watchs = document.querySelectorAll(".watch");
+    // Array.from(watchs).forEach((item) => {
+    //   item.addEventListener("click", (e) => {
+
+
+
+    //   })
     // })
-    let watchs = document.querySelectorAll(".watch");
-    Array.from(watchs).forEach((item) => {
-      item.addEventListener("click", (e) => {
-
-
-
-      })
-    })
 
 
     function openModal(src, id, topic) {
 
       const modAl = document.querySelector(".modAl");
-      console.log(modAl, "div")
+      // console.log(modAl, "div")
       const modalBOdy = document.createElement("div");
       modalBOdy.classList = "modalBOdy";
-      console.log("src", src)
+      // console.log("src", src)
       let link = src;
-      console.log("Links", link)
+      // console.log("Links", link)
       const modaldiv = `<div class="modal fade" id="${'exampleModal' + id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content modC">
@@ -1676,6 +1676,38 @@ doclass12.appendChild(DetailPageCards);
 
 })
 }
+
+const windowUrl =window.location.href;
+var url = new URL(windowUrl);
+var getId = url.searchParams.get("id");
+// console.log(getId)
+
+ const jsondata = JSON.parse(localStorage.getItem("courses"));
+//  console.log(jsondata)
+var data_filter = jsondata.filter( element => element.id ==`${getId}`)
+// console.log(data_filter[0].courseTitle)
+//date
+const year =new Date().getFullYear();
+const Dates =new Date().getDate();
+const currentdate =new Date().getMonth();
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+ let  Month =monthNames[new Date().getMonth()]
+
+// console.log(Month,"date");
+
+
+ $(".CourseTitleV1").html(`${data_filter[0].courseTitle} ${year}-${year+1}`);
+ $(".CourseSt:first").html(`Starting on ${Dates+4}th ${Month}`);
+ $(".AmtLeft").html(`${data_filter[0].courseTitle}`);
+ $(".Amppl").html(`₹${data_filter[0].coursePrice-data_filter[0].courseDiscounts}/year`);
+ $(".Delamt").html(`<del>₹ ${data_filter[0].coursePrice}</del>`);
+ $(".wePlo").html(`${data_filter[0].courseDescription}`);
+ $(".SMBnb").html(`${data_filter[0].courseTitle}`);
+ $(".UBNBTitle").html(`${data_filter[0].courseTitle} /196+ Classes`);
+ $(".UBNBSub").html(`<strong>${data_filter[0].coursePrice-data_filter[0].courseDiscounts}</strong>`)
+ 
 
 
 
