@@ -2077,7 +2077,13 @@ h3.PayTagline{
     display: flex;
     position: relative;
 }
-    
+ .contactus{
+    padding: 20px 75px;
+ } 
+ h1.ConusTitle{
+    padding: 10px;
+    text-align: center;
+ }  
 /* modalbuycourse */
 
 
