@@ -809,18 +809,18 @@
         <form>
           <div class="form-group">
            <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name" style="height: 50px;">
           </div>
             <div style="color: red;margin-left: 22px;font-size: 13px;" class="NameTAr"></div>
           </div>
           <div class="form-group">
             <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-telephone-fill" style="font-size: 18px; color: #297CBA;"></i></label>
-             <input type="number" maxlength="10" class="form-control" id="exampleFormControlInput2" placeholder="Enter your phone number."></div>
+             <input type="number" maxlength="10" class="form-control" id="exampleFormControlInput2" placeholder="Enter your phone number." style="height: 50px;"></div>
              <div style="color: red;margin-left: 22px; font-size: 13px;" class="NumberTAr"></div>
            </div>
           
           <div class="form-group">
-            <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-book-half" style="color: #297CBA;font-size: 18px;margin-right: 10px;"></i></div><select class="form-control" id="exampleFormControlSelect1">
+            <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-book-half" style="color: #297CBA;font-size: 18px;margin-right: 10px;"></i></div><select class="form-control" id="exampleFormControlSelect1" style="height: 50px;">
               <option>12th Class Science</option>
               <option>12th Class Commerce</option>
               <option>12th Humanities (Arts)</option>
@@ -833,6 +833,7 @@
               <option>Neet</option>
             </select></div>
           </div>
+          <div class="SubmittedSus" style="text-align: center;color: lightgreen;"></div>
           
          
         </form>
@@ -845,6 +846,33 @@
   </div>
 </div>
  <!-- ///// -->
+ <!-- buycoursemodal -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- buycoursemodal -->
   </main>
   <footer>
     <div class="normalFooter">
@@ -1467,6 +1495,13 @@ param.append("classes",`${ClassesBook}`);
 axios.post('https://api.markschamp.com//studentbasic/bookFreeDemo',param)
   .then(function (response) {
     console.log(response);
+    // alert("we will call you Shortly....")
+    $(".SubmittedSus").html("We will call you shortly....");
+    setTimeout(() => {
+    $("#exampleFormControlInput1").val("");
+    $("#exampleFormControlInput2").val("");
+    $(".SubmittedSus").html("");
+        }, 2500);
   })
   .catch(function (error) {
     console.log(error);

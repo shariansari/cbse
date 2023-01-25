@@ -2003,6 +2003,83 @@ h1.\\\"Description {
 .BuyCourse{
     display: none;
 }
+/* modalbuycourse */
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+    
+    @media (min-width: 1025px) {
+    .h-custom-2 {
+    height: 100%;
+    }
+    }
+
+
+    /* ////payment */
+    .paymentGateway{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 75px;
+    }
+    .Paycon{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    h1.onlinePay{
+        font-size: 35px;
+        font-weight: 600!important;
+    }
+    .onlinepaySub{
+        color: gray;
+    font-size: 20px;
+    border-top: 1px solid gray;
+    margin-top: 6px;
+}
+.Paynow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+}
+.paynowcon{
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 77%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 17px;
+} 
+h3.PayTagline{
+    background: #297cba;
+    color: #fff;
+    padding: 13px;
+    font-size: 27px;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 10px;
+}
+.FieldCon{
+    width: 85%;
+    margin: 10px; 
+}
+.labelName{
+    padding: 8px 0;
+}
+.inputFields{
+    display: flex;
+    position: relative;
+}
+    
+/* modalbuycourse */
+
 
 
 
@@ -2299,6 +2376,9 @@ h1.\\\"Description {
         
     
     @media screen and (max-width:715px) {
+        .paymentGateway{
+            padding: 20px;
+        }
         .Ftplus{
             width: 99%;
             flex-direction: row;
@@ -2623,6 +2703,9 @@ h1.\\\"Description {
     }
  }
  @media screen and (max-width:435px) {
+    h1.onlinePay{
+        font-size: 29px;
+    }
     .CoursePageBanner{
         padding: 0px;
        }
