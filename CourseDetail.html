@@ -711,7 +711,7 @@
                         <div class="CoursezpLower">Performace tracking App</div>
                     </div>
                 </div>
-                    <button class="btn dd en" style="background-color: #FBC100;width: 250px !important;">Enroll now</button>
+                    <button class="btn dd en" data-toggle="modal" data-target="#exampleModalCenter" style="background-color: #FBC100;width: 250px !important;">Enroll now</button>
                 </div>
             </div>
         </div>
@@ -794,7 +794,7 @@
             </div>
           </div>
           <div class="Payamtbtn">
-            <button class="btn dd">Buy Course</button>
+            <button class="btn dd" data-toggle="modal" data-target="#exampleModalCenter">Buy Course</button>
           </div>
         </div>
         
@@ -802,7 +802,7 @@
 </div>
 <!-- ////// -->
 <div class="FtUpper" style="display: flex;align-items: center;justify-content: center;">
-  <img src="/images/CourseBanner.png" alt="">
+  <img style="width: 95vw;" src="/images/CourseBanner.png" alt="">
 </div>
 <div class="FeaturesDev">
   <div class="FtCards">
@@ -969,7 +969,7 @@
       </div>
     </div>
   </div>
-  <div><button class="btn dd">Buy Course</button></div>
+  <div><button class="btn dd" data-toggle="modal" data-target="#exampleModalCenter">Buy Course</button></div>
  </div>
  <!-- BOOKDemo modal -->
  <!-- Button trigger modal -->
@@ -1026,9 +1026,7 @@
  <!-- ///// -->
  <!-- buyCoursemodal -->
  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -1045,7 +1043,7 @@
         <section>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-sm-6 px-0 d-none d-sm-block">
+              <div class="col-sm-6 px-0  d-sm-block">
                 <div>
                 <h2 style="color: #6e6e6e;font-size: 20PX;">Enroll now to learn LIVE</h2>
                 <h2 style="color: #6e6e6e;font-size: 20PX;">Online from India's best teachers</h2>
@@ -1060,7 +1058,7 @@
                   <span class="h1 fw-bold mb-0">Logo</span>
                 </div> -->
         
-                <div class="d-flex align-items-center h-custom-2 ">
+                <div class="d-flex align-items-center h-custom-2 sm-12">
         
                   <form class="Login">
         
@@ -1812,7 +1810,7 @@ $("#signup").click(function(){
 
 
 
-
+  localStorage.setItem("StudentName",`${Name}`)
 
  
 const param =new URLSearchParams()
@@ -1919,19 +1917,14 @@ else{
     console.log(response.data.message);
     if(response.data.message=='Successfully Saved.'){
       console.log("susscessfuly signup")
-      $(".Register").hide();
-      $(".Login").show();
+    
+      
+      window.location.href = `${location.origin}/Payment.html?id=${getId}`;
     }
   
-    // setTimeout(() => {
-    // $("#exampleFormControlInput1").val("");
-    // $("#exampleFormControlInput2").val("");
-    // $(".SubmittedSus").html("");
-    //     }, 2500);
+
   })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
+  
 }
 
 })
@@ -1971,7 +1964,10 @@ param.append("password",`${CnfrmPassword}`);
     console.log(response);
     console.log(response.data);
     if(response.data["message:"]=="Successfull Login"){
-      console.log("yes");
+      // console.log("yes");
+    
+      window.location.href = `${location.origin}/Payment.html?id=${getId}`;
+      // localStorage.clear();
     }
 
     else{
@@ -1982,21 +1978,9 @@ param.append("password",`${CnfrmPassword}`);
     $("#Password").html("")
      }, 2500);
     }
-    // if(response.data.message=='Successfully Saved.'){
-      // console.log("susscessfuly signup")
-      // $(".Register").hide();
-      // $(".Login").show();
-    // }
-  
-    // setTimeout(() => {
-    // $("#exampleFormControlInput1").val("");
-    // $("#exampleFormControlInput2").val("");
-    // $(".SubmittedSus").html("");
-    //     }, 2500);
+
   })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
+
 }
 
 
