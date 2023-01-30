@@ -2146,6 +2146,21 @@ h3.PayTagline{
     text-transform: capitalize;
     margin-bottom: 4px;
  }
+ .Logout {
+    position: absolute;
+    z-index: 3;
+    padding: 20px;
+    background-color: white;
+    top: 70px;
+    display: none;
+    /* position: relative;
+    opacity: 1;
+    transform: none;
+    transition: opacity 220ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 147ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    top: 58px;
+    left: 1234px;
+    transform-origin: 0px 0px; */
+ }
 /* modalbuycourse */
 
 
@@ -2184,6 +2199,9 @@ h3.PayTagline{
     
 }
 @media screen and (max-width:1100px){
+    .contactus{
+        padding: 20px;
+    }
     .FeaturesDev{
         padding: 10px 20px;
     }
@@ -2422,6 +2440,33 @@ h3.PayTagline{
     }
    
     @media screen and (max-width:800px) {
+        #ContactUS{
+            width: 100%;
+        }
+        .Conrcp{
+            width: 92%;
+        }
+        .ConRe{
+            margin-top: 5px;
+        }
+        .ContactHi{
+            width: 97%;
+        }
+        .middleCon{
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 18px;
+            align-items: center;
+        }
+        .leftContact{
+            width: 100%;
+        }
+        .CPCRight{
+            width: 471px;
+    margin-top: 30px;
+}
+        
+        
           .bannerClass12th{
             background-position:  0px  !important;
         }
@@ -2683,6 +2728,9 @@ h3.PayTagline{
  }
 
  @media screen and (max-width:560px) {
+    .contactus{
+        padding: 20px 10px;
+    }
 
     .bannerClass12th{
         height: 230px;

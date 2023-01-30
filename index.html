@@ -391,8 +391,8 @@
             </div>
           </div>
         </div>
-        <div style="color: black;padding: 20px;font-weight: 650;"> Free Live Classes</div>
-        <hr>
+        <!-- <div style="color: black;padding: 20px;font-weight: 650;"> Free Live Classes</div> -->
+        <!-- <hr> -->
        <a href="Payment.html">
         <div style="color: black;padding: 20px;font-weight: 650;">Payment</div>
        </a>
@@ -401,7 +401,7 @@
           <div style="color: black;padding: 20px;font-weight: 650;">contact-us</div>
         </a>
         <hr>
-        <div style="color: black;padding: 20px;font-weight: 650;">Sign up</div>
+        <div style="color: black;padding: 20px;font-weight: 650;" data-toggle="modal" data-target="#exampleModalCenter">Sign up</div>
 
 
       </div>
@@ -665,7 +665,13 @@
           </div>
         </a>
         <div class="signup">
-          <button class="sigbtn">Signup</button>
+          <button class="sigbtn" data-toggle="modal"data-target="#exampleModalCenter">Signup</button>
+          <div class="ShowAvtar">
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 50px;" id="avtarsh"
+  alt="Avatar" />
+  <div class="Logout shadow p-3 mb-5 bg-white rounded"><button id="Dolog" style="background-color: white;border: none;">Logout</button></div>
+</div>
+
         </div>
       </div>
     </div>
@@ -803,16 +809,18 @@
             <div class="form-group">
               <label for="exampleFormControlInput1"><strong>Eneter your Name</strong></label>
               <input style="padding: 16.5px 14px;width: 280px;height: 50px;" type="email" class="form-control inps"
-                id="exampleFormControlInput1" placeholder="name">
+                id="CallName" placeholder="name">
+                <div id="Callname" style="color: red;"></div>
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1"><strong>Eneter your Phone no.</strong></label>
               <input style="width: 280px;height: 50px;" type="email" class="form-control inps"
-                id="exampleFormControlInput1" placeholder="phone no.">
+                id="callPhone" placeholder="phone no.">
+                <div id="Callphone" style="color: red;"></div>
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1"><strong>Select Class</strong></label>
-              <select class="form-control inps" id="exampleFormControlSelect1" style="width: 280px;height: 50px;">
+              <select class="form-control inps" id="callClass" style="width: 280px;height: 50px;">
                 <option>Class 9th</option>
                 <option>Class 10th</option>
                 <option>Class 11th</option>
@@ -824,14 +832,16 @@
 
 
           </form>
-          <div class="submitform"><button class="btn dd">BOOK DEMO</button></div>
+          <div class="submitform" id="DemoCall"><button class="btn dd">BOOK DEMO</button></div>
 
         </div>
+        <div id ="DemoShort" style="font-size: 40px;text-align: center;color: green;font-weight: 700;"></div>
         <div class="ourEx">
           <h3 style="font-size: 20px;font-weight: 700;">Our Experts will talk to you</h3>
         </div>
       </div>
     </div>
+ 
     <div class="studentTestimonial">
       <div class="what">What
         <div class="studentsay">Student Say</div>
@@ -985,7 +995,7 @@
             </div>
             <div class="modal-body">
               <div class="LyerOption">
-                <div class="SelectRound classSelect">12th Class Science</div>
+                <div class="SelectRound classSelect docolor">12th Class Science</div>
                 <div class="SelectRound classSelect">12th Class Commerce</div>
                 <div class="SelectRound classSelect">11th Class Science</div>
                 <div class="SelectRound classSelect">11th Class Commerce</div>
@@ -997,9 +1007,9 @@
                 <h3 class="SelectLayerTitle">Select Medium</h3>
               </div>
               <div class="LyerOption">
-                <div class="SelectRound">English</div>
-                <div class="SelectRound">Hindi</div>
-                <div class="SelectRound">Hinglish</div>
+                <div class="SelectRound Medium docolor" >English</div>
+                <div class="SelectRound Medium">Hindi</div>
+                <div class="SelectRound Medium">Hinglish</div>
               </div>
 
 
@@ -1014,6 +1024,109 @@
         </div>
       </div>
     </div>
+    
+<!-- Modal -->
+<div class="modal fade hideit " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="border: 0px;">
+        <h5 class="modal-title" id="exampleModalLongTitle"><img src="/images/Logo.jpg" alt="" style="width: 200px;"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- ... -->
+        <section>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6 px-0  d-sm-block">
+                <div>
+                <h2 style="color: #6e6e6e;font-size: 20PX;">Enroll now to learn LIVE</h2>
+                <h2 style="color: #6e6e6e;font-size: 20PX;">Online from India's best teachers</h2>
+                </div>
+                <img src="/images/log.gif"
+                  alt="Login image" class="w-100" style="object-fit: cover; object-position: left;height: 280px;">
+              </div>
+              <div class="col-sm-6 text-black">
+        
+                <!-- <div class="px-5 ms-xl-4">
+                  <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                  <span class="h1 fw-bold mb-0">Logo</span>
+                </div> -->
+        
+                <div class="d-flex align-items-center h-custom-2 sm-12">
+        
+                  <form class="Login">
+        
+        
+                    <div class="form-outline mb-4">
+                      <input type="email" id="ConfirmPhoneno" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example18">Phone no</label>
+                      <div style="color: red;" id="phone"></div>
+                    </div>
+                    
+        
+                    <div class="form-outline mb-4">
+                      <input type="password" id="ConfirmPassword" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example28">Password</label>
+                      <div style="color: red;" id="Password"></div>
+                    </div>
+        
+                    <div class="pt-1 mb-4">
+                      <button class="btn dd" type="button" id="login">Login</button>
+                    </div>
+        
+                
+          <p>Don't have an account? <span style="text-decoration: underline;color:blue;" class="register">Register here</span></p>
+
+        
+                  </form>
+
+        
+         <form class="Register">
+        
+        
+          <div class="form-outline mb-3">
+            <input type="text" id="EnterName" class="form-control form-control-lg" placeholder="Name" style="font-size: 1rem;" />
+            <div style="color: red;" id="NameError"></div>
+          </div>
+          <div class="form-outline mb-3">
+            <input type="email" id="EnterEmail" class="form-control form-control-lg" placeholder="Email" style="font-size: 1rem;" />
+            <div style="color: red;" id="EmailError"></div>
+          </div>
+          <div class="form-outline mb-3">
+            <input type="password" id="EnterPassword" class="form-control form-control-lg" placeholder="Password" style="font-size: 1rem;" />
+            <div style="color: red;" id ="PasswordError"></div>
+          </div>
+          
+
+          <div class="form-outline mb-3">
+            <input type="number" id="EnterPhoneno" class="form-control form-control-lg" placeholder="Phone no." style="font-size: 1rem;"/>
+            <div style="color: red;" id="PhonenoError"></div>
+          </div>
+
+          <div class="pt-1 mb-4">
+            <button class="btn dd" type="button" id="signup">SignUp</button>
+          </div>
+
+          <p>Already have account? <span style="text-decoration: underline;color:blue;" class="login">Login</span></p>
+
+        </form>
+
+                </div>
+        
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        <!-- ... -->
+      </div>
+      
+    </div>
+  </div>
+</div>
   </main>
   <footer>
     <div class="normalFooter">
@@ -1165,7 +1278,7 @@
     </div>
   </footer>
 
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -1183,6 +1296,7 @@
 
   <script>
     $(document).ready(function () {
+      $(".Login").hide();
       Boards();
   
 
@@ -1761,7 +1875,7 @@
       console.log(data, "dsdsd")
 
     })
-    // $(".SelectRound").css({"background":"white"})
+    let SlectedClass ="12th Class Science";
     let Coursebtns = document.querySelectorAll(".classSelect");
     // console.log(Coursebtns,"bbbbbbb");
     
@@ -1769,21 +1883,41 @@
       butoon.addEventListener('click', (e) => {
         // butoon.classList.toggle("docolor");
         localStorage.setItem("Indices",index);
-        
+        console.log(localStorage.getItem("Indices")) 
+        if(localStorage.getItem("Indices") == index){
+          // alert();
+          let SlectedClass = e.target.innerHTML;
+
+localStorage.setItem("SlelectedClass", SlectedClass);
+          $(".classSelect").removeClass("docolor");
+    $(butoon).addClass("docolor"); 
+        }
+      
+      
+     
       
     
-      ( index == localStorage.getItem("Indices")) ?
-     
-       ( butoon.classList.add("docolor"))
-      :
-        butoon.classList.remove("docolor");
-      
-        let SlectedClass = e.target.innerHTML;
-
-        localStorage.setItem("SlelectedClass", SlectedClass);
+  
 
       })
     });
+    //medium
+    let MediumBtns =document.querySelectorAll(".Medium");
+    Array.from(MediumBtns).forEach((medium,index)=>{
+      medium.addEventListener("click",(e)=>{
+        localStorage.setItem("Indices",index);
+        if(localStorage.getItem("Indices") == index){
+          // alert();
+        
+
+          $(".Medium").removeClass("docolor");
+    $(medium).addClass("docolor"); 
+        }
+      
+      })
+
+    })
+    //medium
     let CouRse = document.querySelectorAll(".listLinks");
     // console.log(CouRse,"ff");
     Array.from(CouRse).forEach((course) => {
@@ -1792,14 +1926,302 @@
         localStorage.setItem("SlelectedCourse", SelectedCourse)
       })
     })
+    
+
+    $("#DemoCall").click(function(){
+    
+      
+ let CallName =$("#CallName").val();
+ let CallPhone =$("#callPhone").val();
+ let CallClasses =$("#callClass").val();
+  
+const param =new URLSearchParams()
+param.append("studentsName",`${CallName}`);
+param.append("phoneNo",`${CallPhone}`);
+param.append("classes",`${CallClasses}`);
+
+if(CallName==="" && CallPhone==="" ){
+  $("#Callname").html("Fields Can't be empty *")
+  $("#Callphone").html("Fields Can't be empty *")
+  setTimeout(() => {
+    $("#Callname").html("");
+    $("#Callphone").html("");
+ 
+     }, 2500);
+}
+else if (CallPhone.length!=10){
+  $("#Callphone").html("Invalid Phoneno *");
+  setTimeout(() => {
+    $("#Callname").html("");
+    $("#Callphone").html("");
+ 
+     }, 2500);
+
+}
+ else{
+  axios.post("https://api.markschamp.com//studentbasic/bookFreeDemo",param)
+  .then(function(response){
+    console.log(response);
+    if(response.data.message=='Successfully Saved.'){
+      console.log("susscessfuly signup");
+      $("#DemoShort").html("We will call you shortly...");
+      setTimeout(() => {
+    $("#DemoShort").html("");
+    $("#CallName").val("");
+    $("#callPhone").val("");
+  
+ 
+     }, 2500);
+
+    
+      
+    
+    }
+  })
+  
+ }
+
+  
+    })
 
  
+///buycourse modal
+//login & register 
+$(".register").click(function(){
+ $(".Login").hide();
+ $(".Register").show();
+})
+$(".login").click(function(){
+  $(".Login").show();
+ $(".Register").hide();
+})
 
 
 
 
+$("#signup").click(function(){
+  Name =$("#EnterName").val();
+  Email=$("#EnterEmail").val();
+  Password=$("#EnterPassword").val();
+  Phoneno=$("#EnterPhoneno").val();
 
 
+
+  localStorage.setItem("StudentName",`${Name}`)
+
+ 
+const param =new URLSearchParams()
+param.append("studentsName",`${Name}`);
+param.append("studentsEmail",`${Email}`);
+param.append("phone",`${Phoneno}`);
+param.append("password",`${Password}`);
+
+
+if(Name === "" && Email ==="" && Phoneno ==="" && Password ===""){
+  $("#NameError").html("Fields Can't be empty *")
+    $("#EmailError").html("Fields Can't be empty *")
+    $("#PasswordError").html("Fields Can't be empty *")
+    $("#PhonenoError").html("Fields Can't be empty *")
+          
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+
+ }
+ else if(Phoneno.length!=10){
+  $("#PhonenoError").html("Please Enter Valid no *")
+  setTimeout(() => {
+    $(".NameError").html("")
+    $(".EmailError").html("")
+    $(".PasswordError").html("")
+    $(".PhonenoError").html("")
+        }, 2500);
+ }
+else if(Name ===""){
+  $("#NameError").html("Fields Can't be empty *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+}
+else if(Email ===""){
+  $("#EmailError").html("Fields Can't be empty *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+}
+ else if(!Email.includes("@")){
+  $("#EmailError").html("Email must have @ *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+
+}
+else if(Phoneno ===""){
+  $("#PhonenoError").html("Fields Can't be empty *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+}
+else if(Password ===""){
+  $("#PasswordError").html("Fields Can't be empty *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+}
+else if(Password.length<6){
+  $("#PasswordError").html("Password Should not be less than 6 *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+}
+else if(Password.length>12){
+  $("#PasswordError").html("Password Should not be greater than 12 *")
+  setTimeout(() => {
+    $("#NameError").html("")
+    $("#EmailError").html("")
+    $("#PasswordError").html("")
+    $("#PhonenoError").html("")
+        }, 2500);
+
+
+
+}
+else{
+  axios.post('https://api.markschamp.com//studentbasic/signup',param)
+  .then(function (response) {
+    console.log(response);
+    console.log(response.data.message);
+    if(response.data.message=='Successfully Saved.'){
+      localStorage.setItem("LoggedIn",true);
+      console.log("susscessfuly signup")
+      $(".hideit").css("display","none");
+    $(".ShowAvtar").show();
+ $(".sigbtn").hide();
+ $(".Logout").hide();
+ $("#Dolog ").click(function(){
+    localStorage.setItem("LoggedIn",false);
+    $(".ShowAvtar").hide();
+ $(".sigbtn").show();
+  })
+ 
+    
+      
+      // window.location.href = `${location.origin}/Payment.html?id=${getId}`;
+    }
+  
+
+  })
+  
+}
+
+})
+$("#login").click(function(){
+
+
+
+let CnfrmPhone =$("#ConfirmPhoneno").val();
+let CnfrmPassword =$("#ConfirmPassword").val();
+ 
+const param =new URLSearchParams()
+param.append("phoneNoOrEmailid",`${CnfrmPhone}`);
+param.append("password",`${CnfrmPassword}`);
+
+
+
+
+if( CnfrmPhone ==="" && CnfrmPassword ===""){
+ $("#phone").html("Fields Can't be empty *")
+   $("#Password").html("Fields Can't be empty *")
+   
+         
+ setTimeout(() => {
+   $("#phone").html("")
+   $("#Password").html("")
+    }, 2500);
+
+
+    
+
+}
+else{
+ axios.post(' https://api.markschamp.com//studentbasic/loginPage',param)
+ .then(function (response) {
+   console.log(response);
+   console.log(response.data);
+   if(response.data["message:"]=="Successfull Login"){
+    localStorage.setItem("LoggedIn",true);
+    $(".hideit").css("display","none");
+    $(".ShowAvtar").show();
+ $(".sigbtn").hide();
+ $(".Logout").hide();
+ $("#Dolog ").click(function(){
+    localStorage.setItem("LoggedIn",false);
+    $(".ShowAvtar").hide();
+ $(".sigbtn").show();
+  })
+ 
+   
+   }
+
+   else{
+     $("#phone").html("Phone no and Password doesn't matches *")
+   $("#Password").html("Phone no and Password doesn't matches *")
+   setTimeout(() => {
+   $("#phone").html("")
+   $("#Password").html("")
+    }, 2500);
+   }
+
+ })
+
+}
+
+
+})
+let  logged =localStorage.getItem("LoggedIn");
+console.log(logged);
+if (logged =="true"){
+ console.log("yes");
+ 
+ 
+ $(".ShowAvtar").show();
+ $(".sigbtn").hide();
+ $("#avtarsh").click(function(){
+  $(".Logout").toggle();
+  
+  $("#Dolog ").click(function(){
+    localStorage.setItem("LoggedIn",false);
+    $(".ShowAvtar").hide();
+ $(".sigbtn").show();
+  })
+ })
+
+}
+else{
+  $(".ShowAvtar").hide();
+  $(".sigbtn").show();
+}
 
 
   </script>

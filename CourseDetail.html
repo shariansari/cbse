@@ -969,7 +969,7 @@
       </div>
     </div>
   </div>
-  <div><button class="btn dd" data-toggle="modal" data-target="#exampleModalCenter">Buy Course</button></div>
+  <div><button class="btn dd" id="directPay" data-toggle="modal" data-target="#exampleModalCenter">Buy Course</button></div>
  </div>
  <!-- BOOKDemo modal -->
  <!-- Button trigger modal -->
@@ -1305,54 +1305,7 @@
 
   <script>
    
-    // })
-    // const vedioCCCard = JSON.parse(localStorage.getItem("demovedios"))
-
-
-    // vedioCCCard.forEach((element, i) => {
-
-
-
-
-    //   const responsive = document.querySelector(".responsive");
-  
-
-    //   const card = document.createElement("div");
-    //   card.classList = "card";
-    //   const vedioCard = `
-    //   <img class="card-img-top" src="/images/videoBackground.jpg" alt="Card image cap">
-    //               <div class="card-body">
-    //                 <div class="rcfloat">
-    //                   <img src="/images/videoIcon.png" alt="" >
-    //                 </div>
-    //                 <div class="containerRecord">
-    //                   <h3 class="cardTit">${element.classes}</h3>
-    //                   <p class="cardPara">${element.tutorName}</p>
-    //                 </div>
-    //                 <div class="card-title">${element.subject}</div>
-    //                <div class="vedioTime" style="display: flex;">
-    //                 <div class="vedioLeft">
-    //                   <div class="vedioTxt">${element.topicName}</div>
-    //                   <div class="vTmie">${element.videosLink}</div>
-    //                 </div>
-    //                 <div class="vedioRight">
-    //                 <a href="#" class="btn btn-primary watch" data-toggle="modal" data-target="${'#exampleModal' + element.id}" onclick="openModal('${element.demolinksvideos}','${element.id}','${element.topicName}')">Watch </a></div>
-    //               </div>
-    //               </div>`
-
-    //   card.innerHTML += vedioCard;
-    //   responsive.appendChild(card);
-    // });
-    // // })
-    // let watchs = document.querySelectorAll(".watch");
-    // Array.from(watchs).forEach((item) => {
-    //   item.addEventListener("click", (e) => {
-
-
-
-    //   })
-    // })
-
+   
 
     function openModal(src, id, topic) {
 
@@ -1917,6 +1870,7 @@ else{
     console.log(response.data.message);
     if(response.data.message=='Successfully Saved.'){
       console.log("susscessfuly signup")
+      localStorage.setItem("LoggedIn",true)
     
       
       window.location.href = `${location.origin}/Payment.html?id=${getId}`;
@@ -1964,7 +1918,8 @@ param.append("password",`${CnfrmPassword}`);
     console.log(response);
     console.log(response.data);
     if(response.data["message:"]=="Successfull Login"){
-      // console.log("yes");
+      console.log("yes");
+      localStorage.setItem("LoggedIn",true)
     
       window.location.href = `${location.origin}/Payment.html?id=${getId}`;
       // localStorage.clear();
@@ -1985,6 +1940,20 @@ param.append("password",`${CnfrmPassword}`);
 
 
 })
+if(localStorage.getItem("LoggedIn")=="true"){
+  $(".Payamtbtn").click(function(){
+    window.location.href = `${location.origin}/Payment.html?id=${getId}`;
+    
+  })
+  $("#directPay").click(function(){
+    window.location.href = `${location.origin}/Payment.html?id=${getId}`;
+    
+  })
+  $(".en").click(function(){
+    window.location.href = `${location.origin}/Payment.html?id=${getId}`;
+    
+  })
+}
   </script>
  
 
