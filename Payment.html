@@ -489,7 +489,7 @@
                     </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn dd">Procedd to Pay</button>
+                    <button type="submit" class="btn dd" id="payDo">Procedd to Pay</button>
                 </div>
             </div>
         </div>
@@ -523,7 +523,7 @@
     </div>
   </footer>
 
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -540,10 +540,7 @@
 
 
   <script>
-    $(document).ready(function () {
-
-
-    });
+   
 
 
   </script>
@@ -688,11 +685,39 @@ $("#AmountPay").val(`${data_filter[0].coursePrice-data_filter[0].courseDiscounts
  $("#StudentPay").val(`${StudentName}`)
 
  
+///payment
+
+$("#payDo").click(async function() {
+  const amount =$("#AmountPay").val();
+const Sname= $("#StudentPay").val();
+const Payemail=$("#EmailPay").val();
+const Payphone=$("#PhonenoPay").val();
+  const res = await("https://checkout.razorpay.com/v1/checkout.js");
+  
+
+if(res){
+  const params=new URLSearchParams();
+  params.append("amount",parseInt(amount)*100);
+  const {data}=await axios.post(`https://api.markschamp.com/RazorPayOrderId`,params);
+  if(data){
+    const params=new URLSearchParams();
+    const {OrderId1}=data;
+    params.append("firstname",Sname)
+    params.append("email",Payemail);
+    params.append("phone",Payphone);
+    params.append("productinfo","MArkschamp");
+    params.append("amount",parseInt(amount)*100);
+    params.append("currency","INR");
+    params.append("order_id",OrderId1);
+    params.append("RazorPayGateway","RazorPayICICI");
+
+    await axios.post(`https://api.markschamp.com/RazorPayPaymentTryingNotification`,params);
+  }
+
+}
 
 
-
-
-
+});
 
 
 
