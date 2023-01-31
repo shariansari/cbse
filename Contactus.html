@@ -908,7 +908,7 @@
 
     $(".SelectRound").click(function () {
       const data = $(this).innerHTML;
-      console.log(data, "dsdsd")
+      // console.log(data, "dsdsd")
 
     })
     // $(".SelectRound").css({"background":"white"})
@@ -1033,11 +1033,11 @@ else if (ContactWrite===""){
 else{
   axios.post(" https://api.markschamp.com//studentbasic/contactUs",param)
   .then(function(response){
-    console.log(response);
-    console.log(response.data.message);
+    // console.log(response);
+    // console.log(response.data.message);
     // Successfully Saved.
     if(response.data.message ="Successfully Saved."){
-      console.log("ok")
+      // console.log("ok")
       $("#successfullycon").html("We will Get Back to You Soon.....");
     
   

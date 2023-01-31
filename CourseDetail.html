@@ -409,7 +409,6 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
   </div>
-
   <header>
     <div class="head" style="display: flex;align-items: center;background-color: white;">
       <nav class="navbar navbar-expand-lg  leftHead" style="padding: 0%;">
@@ -520,7 +519,7 @@
           <div class="mobilescreen">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="/payment" style="text-decoration: none;font-size: 19px; color:black;">Payment
+                <a class="nav-link" href="Payment.html" style="text-decoration: none;font-size: 19px; color:black;">Payment
                   <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -566,8 +565,7 @@
                           <hr>
                           <a href="Career.html" style="color: black;text-decoration: none;">
                             <div style="display: flex;align-items: center;justify-content: start;">
-                              <img src="/images/Career.png" alt="testimonial"
-                                style="width: 50px;margin-right: 5px;">
+                              <img src="/images/Career.png" alt="testimonial" style="width: 50px;margin-right: 5px;">
                               <div style="display: flex;flex-direction: column;">
                                 <div>
                                   <strong>Career</strong>
@@ -664,7 +662,13 @@
           </div>
         </a>
         <div class="signup">
-          <button class="sigbtn">Signup</button>
+          <button class="sigbtn" data-toggle="modal"data-target="#exampleModalCenter">Signup</button>
+          <div class="ShowAvtar">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU" class="rounded-circle" style="width: 50px;" id="avtarsh"
+  alt="Avatar" />
+  <div class="Logout shadow p-3 mb-5 bg-white rounded"><button id="Dolog" style="background-color: white;border: none;">Logout</button></div>
+</div>
+
         </div>
       </div>
     </div>
@@ -988,8 +992,8 @@
       <div class="modal-body" style="padding-bottom: 2px;">
         <form>
           <div class="form-group">
-           <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name"></div>
+           <div style="display: flex;"> <label for="exampleFormControl" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
+            <input type="email" class="form-control" id="exampleFormControlI" placeholder="Enter your name"></div>
             
           </div>
           <div class="form-group">
@@ -999,7 +1003,7 @@
            </div>
           
           <div class="form-group">
-            <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-book-half" style="color: #297CBA;font-size: 18px;margin-right: 10px;"></i></div><select class="form-control" id="exampleFormControlSelect1">
+            <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-book-half" style="color: #297CBA;font-size: 18px;margin-right: 10px;"></i></div><select class="form-control" id="exampleFormSelect1">
               <option>12th Class Science</option>
               <option>12th Class Commerce</option>
               <option>12th Humanities (Arts)</option>
@@ -1131,6 +1135,55 @@
   </div>
 </div>
  <!-- buyCoursemodal -->
+ <div class="modal fade" id="DemoBook" tabindex="-1" role="dialog" aria-labelledby="DemoBookTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="border: 0px;">
+        <div class="modal-title" id="exampleModalLongTitle"><img src="/images/Logo.jpg" height="40px" alt=""></div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="padding-bottom: 2px;">
+        <form>
+          <div class="form-group">
+           <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name" style="height: 50px;">
+          </div>
+            <div style="color: red;margin-left: 22px;font-size: 13px;" class="NameTAr"></div>
+          </div>
+          <div class="form-group">
+            <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-telephone-fill" style="font-size: 18px; color: #297CBA;"></i></label>
+             <input type="number" maxlength="10" class="form-control" id="exampleFormControlInput2" placeholder="Enter your phone number." style="height: 50px;"></div>
+             <div style="color: red;margin-left: 22px; font-size: 13px;" class="NumberTAr"></div>
+           </div>
+          
+          <div class="form-group">
+            <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-book-half" style="color: #297CBA;font-size: 18px;margin-right: 10px;"></i></div><select class="form-control" id="exampleFormControlSelect1" style="height: 50px;">
+              <option>12th Class Science</option>
+              <option>12th Class Commerce</option>
+              <option>12th Humanities (Arts)</option>
+              <option>11th Class Science</option>
+              <option>11th Class Commerce</option>
+              <option>11th Humanities (Arts)</option>
+              <option>10th Class</option>
+              <option>9th Class</option>
+              <option>Jee Mains</option>
+              <option>Neet</option>
+            </select></div>
+          </div>
+          <div class="SubmittedSus" style="text-align: center;color: lightgreen;"></div>
+          
+         
+        </form>
+      </div>
+      <div class="modal-footer" style="border: 0px;display: flex;align-items: center;justify-content: center;">
+        <button type="button" class="btn dd" data-dismiss="modal" style="background-color: rgb(165, 143, 150);width: unset;">Close</button>
+        <button type="submit" class="btn dd sub" style="width: unset;">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
   </main>
   <footer>
     <div class="normalFooter">
@@ -1452,18 +1505,18 @@
 
 
     $(document).ready(function () {
-        async function Commerce12 () {
-        let cLasses =localStorage.getItem("SlelectedClass");
-       $(".LowerCourse").children().html( `<div><h3 style="font-size: 27px;" class="doFix" >${cLasses}</h3></div>`); 
-        const response =await fetch (` https://api.markschamp.com/CRMPanel/getCourses?classes=${cLasses}`);
-        const jason = await response.json();
-        return jason;
-      }
-      Commerce12().then((respons)=>{
-        const course12commerce = respons;
-        class12CommerceCbse(course12commerce);
+    //     async function Commerce12 () {
+    //     let cLasses =localStorage.getItem("SlelectedClass");
+    //    $(".LowerCourse").children().html( `<div><h3 style="font-size: 27px;" class="doFix" >${cLasses}</h3></div>`); 
+    //     const response =await fetch (` https://api.markschamp.com/CRMPanel/getCourses?classes=${cLasses}`);
+    //     const jason = await response.json();
+    //     return jason;
+    //   }
+    //   Commerce12().then((respons)=>{
+    //     const course12commerce = respons;
+    //     class12CommerceCbse(course12commerce);
 
-      })
+    //   })
 
     })
 
@@ -1638,78 +1691,78 @@
    
 
 ///12classccourse card
-function class12CommerceCbse (CourseClassas12Commerce) {
+// function class12CommerceCbse (CourseClassas12Commerce) {
 
 
 
-// console.log(CourseClassas12Commerce,"shariq");
-const doclass12 =document.querySelector(".doclass12");
-// console.log(doclass12,"12class");
-const DetailPageCards =document.createElement("div");
-DetailPageCards.classList ="DetailPageCards";
-const CoURse =localStorage.getItem("SlelectedCourse")
+// // console.log(CourseClassas12Commerce,"shariq");
+// const doclass12 =document.querySelector(".doclass12");
+// // console.log(doclass12,"12class");
+// const DetailPageCards =document.createElement("div");
+// DetailPageCards.classList ="DetailPageCards";
+// const CoURse =localStorage.getItem("SlelectedCourse")
 
-CourseClassas12Commerce.forEach((elm)=>{
+// CourseClassas12Commerce.forEach((elm)=>{
 
 
 
-const detailCourseData =`
-<div class="PageUpper" >
-      <div class="DetailLeft">
-          <div class="courseDetailLeftUpper">
-              <div class="Detailbtn">
-                <a href="CourseDetail.html?id=${elm.id}" style ="text-decoration:none"><button class="btn dd vc">View Course Details</button></a> 
-              </div>
-          </div>
-          <div class="courseDetailLeftUpper">
-              <div class="Detailbtn">
-                  <button class="btn dd vc"><span class ="DemoBook" data-toggle="modal" data-target="#DemoBook">Book Free Demo<span/></button>
-              </div>
-          </div>
-      </div>
-      <div class="DetailRight">
-          <div class="courseName">${elm.courseTitle} ${CoURse}</div>
-          <div class="CouseDate">
-              <div class="dateTarget">
-                  <div class="DateIcon">
-                      <img style="width:25px" src="/images/Target.png" alt="">
-                  </div>
-                  <div class="DateText">One year Batch 2023-24</div>
-              </div>
-              <div class="TargetCr">
-                 <div class="dateTarget"> <div class="DateIcon">
-                  <img style="width:25px" src="/images/ClassesPerMonth.png" alt="">
-              </div>
-              <div class="DateText">16 Classes/month</div></div>
-              </div>
-          </div>
-          <div class="features">
-              <div class="featur"><strong>Features</strong></div>
-              <div class="roundFeatures">
-                  <div class="cardshape">150+ Classes</div>
-                  <div class="cardshape">Progress Application</div>
-                  <div class="cardshape">200+ Question bank</div>
-                  <div class="cardshape">Many more+</div>
-              </div>
-          </div>
-          <div>
-              <div class="Teachinglang">
-               <div class="techingtick"><i class="bi bi-check-circle-fill" style="color: blue;"></i></div>
-               <div class="Teach"><strong>Teaching Language</strong></div>
-              </div>
-              <div class="teachCont"><div style="padding-left: 27px;color: grey;">English,Hindi,Hinglish</div>
-              </div>
-          </div>
-      </div>
-  </div>
+// const detailCourseData =`
+// <div class="PageUpper" >
+//       <div class="DetailLeft">
+//           <div class="courseDetailLeftUpper">
+//               <div class="Detailbtn">
+//                 <a href="CourseDetail.html?id=${elm.id}" style ="text-decoration:none"><button class="btn dd vc">View Course Details</button></a> 
+//               </div>
+//           </div>
+//           <div class="courseDetailLeftUpper">
+//               <div class="Detailbtn">
+//                   <button class="btn dd vc"><span class ="DemoBook" data-toggle="modal" data-target="#DemoBook">Book Free Demo<span/></button>
+//               </div>
+//           </div>
+//       </div>
+//       <div class="DetailRight">
+//           <div class="courseName">${elm.courseTitle} ${CoURse}</div>
+//           <div class="CouseDate">
+//               <div class="dateTarget">
+//                   <div class="DateIcon">
+//                       <img style="width:25px" src="/images/Target.png" alt="">
+//                   </div>
+//                   <div class="DateText">One year Batch 2023-24</div>
+//               </div>
+//               <div class="TargetCr">
+//                  <div class="dateTarget"> <div class="DateIcon">
+//                   <img style="width:25px" src="/images/ClassesPerMonth.png" alt="">
+//               </div>
+//               <div class="DateText">16 Classes/month</div></div>
+//               </div>
+//           </div>
+//           <div class="features">
+//               <div class="featur"><strong>Features</strong></div>
+//               <div class="roundFeatures">
+//                   <div class="cardshape">150+ Classes</div>
+//                   <div class="cardshape">Progress Application</div>
+//                   <div class="cardshape">200+ Question bank</div>
+//                   <div class="cardshape">Many more+</div>
+//               </div>
+//           </div>
+//           <div>
+//               <div class="Teachinglang">
+//                <div class="techingtick"><i class="bi bi-check-circle-fill" style="color: blue;"></i></div>
+//                <div class="Teach"><strong>Teaching Language</strong></div>
+//               </div>
+//               <div class="teachCont"><div style="padding-left: 27px;color: grey;">English,Hindi,Hinglish</div>
+//               </div>
+//           </div>
+//       </div>
+//   </div>
 
-`
+// `
 
-DetailPageCards.innerHTML +=detailCourseData;
-doclass12.appendChild(DetailPageCards);
+// DetailPageCards.innerHTML +=detailCourseData;
+// doclass12.appendChild(DetailPageCards);
 
-})
-}
+// })
+// }
 
 const windowUrl =window.location.href;
 var url = new URL(windowUrl);
@@ -1866,10 +1919,10 @@ else if(Password.length>12){
 else{
   axios.post('https://api.markschamp.com//studentbasic/signup',param)
   .then(function (response) {
-    console.log(response);
-    console.log(response.data.message);
+    // console.log(response);
+    // console.log(response.data.message);
     if(response.data.message=='Successfully Saved.'){
-      console.log("susscessfuly signup")
+      // console.log("susscessfuly signup")
       localStorage.setItem("LoggedIn",true)
     
       
@@ -1918,7 +1971,7 @@ param.append("password",`${CnfrmPassword}`);
     console.log(response);
     console.log(response.data);
     if(response.data["message:"]=="Successfull Login"){
-      console.log("yes");
+      // console.log("yes");
       localStorage.setItem("LoggedIn",true)
     
       window.location.href = `${location.origin}/Payment.html?id=${getId}`;
@@ -1954,6 +2007,416 @@ if(localStorage.getItem("LoggedIn")=="true"){
     
   })
 }
+//login
+
+$(".sub").click(function(){
+  
+  let Name = $("#exampleFormControlInput1").val()
+  let Phoneno =$("#exampleFormControlInput2").val();
+  let ClassesBook =$("#exampleFormControlSelect1").val();
+ 
+  if(Name === "" ||Phoneno ===""){
+   $(".NameTAr").html("Fields Can't be empty *")
+     $(".NumberTAr").html("Fields Can't be empty *")
+           
+   setTimeout(() => {
+     $(".NameTAr").html("")
+     $(".NumberTAr").html("")
+         }, 2500);
+ 
+  }
+  if(Phoneno.length!=10){
+   $(".NumberTAr").html("Please Enter Valid no *")
+   setTimeout(() => {
+     $(".NameTAr").html("")
+     $(".NumberTAr").html("")
+         }, 2500);
+  }
+ 
+  
+ const param =new URLSearchParams()
+ param.append("studentsName",`${Name}`);
+ param.append("phoneNo",`${Phoneno}`);
+ param.append("classes",`${ClassesBook}`);
+ 
+ 
+ axios.post('https://api.markschamp.com//studentbasic/bookFreeDemo',param)
+   .then(function (response) {
+    //  console.log(response);
+     // alert("we will call you Shortly....")
+     $(".SubmittedSus").html("We will call you shortly....");
+     setTimeout(() => {
+     $("#exampleFormControlInput1").val("");
+     $("#exampleFormControlInput2").val("");
+     $(".SubmittedSus").html("");
+         }, 2500);
+   })
+   .catch(function (error) {
+    //  console.log(error);
+   });
+ 
+ })
+ ///login
+ $(".SelectRound").click(function () {
+       const data = $(this).innerHTML;
+     //   console.log(data, "dsdsd")
+ 
+     })
+     let SlectedClass ="12th Class Science";
+     let Coursebtns = document.querySelectorAll(".classSelect");
+     // console.log(Coursebtns,"bbbbbbb");
+     
+     Array.from(Coursebtns).forEach((butoon,index) => {
+       butoon.addEventListener('click', (e) => {
+         // butoon.classList.toggle("docolor");
+         localStorage.setItem("Indices",index);
+         // console.log(localStorage.getItem("Indices")) 
+         if(localStorage.getItem("Indices") == index){
+           // alert();
+           let SlectedClass = e.target.innerHTML;
+ 
+ localStorage.setItem("SlelectedClass", SlectedClass);
+           $(".classSelect").removeClass("docolor");
+     $(butoon).addClass("docolor"); 
+         }
+       
+       
+      
+       
+     
+   
+ 
+       })
+     });
+     //medium
+     let MediumBtns =document.querySelectorAll(".Medium");
+     Array.from(MediumBtns).forEach((medium,index)=>{
+       medium.addEventListener("click",(e)=>{
+         localStorage.setItem("Indices",index);
+         if(localStorage.getItem("Indices") == index){
+           // alert();
+         
+ 
+           $(".Medium").removeClass("docolor");
+     $(medium).addClass("docolor"); 
+         }
+       
+       })
+ 
+     })
+     //medium
+     let CouRse = document.querySelectorAll(".listLinks");
+     // console.log(CouRse,"ff");
+     Array.from(CouRse).forEach((course) => {
+       course.addEventListener("click", (e) => {
+         let SelectedCourse = e.target.innerHTML;
+         localStorage.setItem("SlelectedCourse", SelectedCourse)
+       })
+     })
+     
+ 
+     $("#DemoCall").click(function(){
+     
+       
+  let CallName =$("#CallName").val();
+  let CallPhone =$("#callPhone").val();
+  let CallClasses =$("#callClass").val();
+   
+ const param =new URLSearchParams()
+ param.append("studentsName",`${CallName}`);
+ param.append("phoneNo",`${CallPhone}`);
+ param.append("classes",`${CallClasses}`);
+ 
+ if(CallName==="" && CallPhone==="" ){
+   $("#Callname").html("Fields Can't be empty *")
+   $("#Callphone").html("Fields Can't be empty *")
+   setTimeout(() => {
+     $("#Callname").html("");
+     $("#Callphone").html("");
+  
+      }, 2500);
+ }
+ else if (CallPhone.length!=10){
+   $("#Callphone").html("Invalid Phoneno *");
+   setTimeout(() => {
+     $("#Callname").html("");
+     $("#Callphone").html("");
+  
+      }, 2500);
+ 
+ }
+  else{
+   axios.post("https://api.markschamp.com//studentbasic/bookFreeDemo",param)
+   .then(function(response){
+     // console.log(response);
+     if(response.data.message=='Successfully Saved.'){
+     //   console.log("susscessfuly signup");
+       $("#DemoShort").html("We will call you shortly...");
+       setTimeout(() => {
+     $("#DemoShort").html("");
+     $("#CallName").val("");
+     $("#callPhone").val("");
+   
+  
+      }, 2500);
+ 
+     
+       
+     
+     }
+   })
+   
+  }
+ 
+   
+     })
+ 
+  
+ ///buycourse modal
+ //login & register 
+ $(".register").click(function(){
+  $(".Login").hide();
+  $(".Register").show();
+ })
+ $(".login").click(function(){
+   $(".Login").show();
+  $(".Register").hide();
+ })
+ 
+ 
+ 
+ 
+ $("#signup").click(function(){
+   Name =$("#EnterName").val();
+   Email=$("#EnterEmail").val();
+   Password=$("#EnterPassword").val();
+   Phoneno=$("#EnterPhoneno").val();
+ 
+ 
+ 
+   localStorage.setItem("StudentName",`${Name}`)
+ 
+  
+ const param =new URLSearchParams()
+ param.append("studentsName",`${Name}`);
+ param.append("studentsEmail",`${Email}`);
+ param.append("phone",`${Phoneno}`);
+ param.append("password",`${Password}`);
+ 
+ 
+ if(Name === "" && Email ==="" && Phoneno ==="" && Password ===""){
+   $("#NameError").html("Fields Can't be empty *")
+     $("#EmailError").html("Fields Can't be empty *")
+     $("#PasswordError").html("Fields Can't be empty *")
+     $("#PhonenoError").html("Fields Can't be empty *")
+           
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ 
+  }
+  else if(Phoneno.length!=10){
+   $("#PhonenoError").html("Please Enter Valid no *")
+   setTimeout(() => {
+     $(".NameError").html("")
+     $(".EmailError").html("")
+     $(".PasswordError").html("")
+     $(".PhonenoError").html("")
+         }, 2500);
+  }
+ else if(Name ===""){
+   $("#NameError").html("Fields Can't be empty *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ }
+ else if(Email ===""){
+   $("#EmailError").html("Fields Can't be empty *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ }
+  else if(!Email.includes("@")){
+   $("#EmailError").html("Email must have @ *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ 
+ }
+ else if(Phoneno ===""){
+   $("#PhonenoError").html("Fields Can't be empty *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ }
+ else if(Password ===""){
+   $("#PasswordError").html("Fields Can't be empty *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ }
+ else if(Password.length<6){
+   $("#PasswordError").html("Password Should not be less than 6 *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ }
+ else if(Password.length>12){
+   $("#PasswordError").html("Password Should not be greater than 12 *")
+   setTimeout(() => {
+     $("#NameError").html("")
+     $("#EmailError").html("")
+     $("#PasswordError").html("")
+     $("#PhonenoError").html("")
+         }, 2500);
+ 
+ 
+ 
+ }
+ else{
+   axios.post('https://api.markschamp.com//studentbasic/signup',param)
+   .then(function (response) {
+     // console.log(response);
+     // console.log(response.data.message);
+     if(response.data.message=='Successfully Saved.'){
+       localStorage.setItem("LoggedIn",true);
+     //   console.log("susscessfuly signup")
+       $(".hideit").css("display","none");
+       
+       $(".hideit").removeClass("show");
+       location.reload();
+     $(".ShowAvtar").show();
+  $(".sigbtn").hide();
+  $(".Logout").hide();
+  $("#Dolog ").click(function(){
+     localStorage.setItem("LoggedIn",false);
+     $(".ShowAvtar").hide();
+  $(".sigbtn").show();
+   })
+  
+     
+       
+       // window.location.href = `${location.origin}/Payment.html?id=${getId}`;
+     }
+   
+ 
+   })
+   
+ }
+ 
+ })
+ $("#login").click(function(){
+ 
+ 
+ 
+ let CnfrmPhone =$("#ConfirmPhoneno").val();
+ let CnfrmPassword =$("#ConfirmPassword").val();
+  
+ const param =new URLSearchParams()
+ param.append("phoneNoOrEmailid",`${CnfrmPhone}`);
+ param.append("password",`${CnfrmPassword}`);
+ 
+ 
+ 
+ 
+ if( CnfrmPhone ==="" && CnfrmPassword ===""){
+  $("#phone").html("Fields Can't be empty *")
+    $("#Password").html("Fields Can't be empty *")
+    
+          
+  setTimeout(() => {
+    $("#phone").html("")
+    $("#Password").html("")
+     }, 2500);
+ 
+ 
+     
+ 
+ }
+ else{
+  axios.post(' https://api.markschamp.com//studentbasic/loginPage',param)
+  .then(function (response) {
+ //    console.log(response);
+ //    console.log(response.data);
+    if(response.data["message:"]=="Successfull Login"){
+     localStorage.setItem("LoggedIn",true);
+     $(".hideit").css("display","none");
+     $(".hideit").removeClass("show");
+     location.reload();
+     $(".ShowAvtar").show();
+  $(".sigbtn").hide();
+  $(".Logout").hide();
+  $("#Dolog ").click(function(){
+     localStorage.setItem("LoggedIn",false);
+     $(".ShowAvtar").hide();
+  $(".sigbtn").show();
+   })
+  
+    
+    }
+ 
+    else{
+      $("#phone").html("Phone no and Password doesn't matches *")
+    $("#Password").html("Phone no and Password doesn't matches *")
+    setTimeout(() => {
+    $("#phone").html("")
+    $("#Password").html("")
+     }, 2500);
+    }
+ 
+  })
+ 
+ }
+ 
+ 
+ })
+ let  logged =localStorage.getItem("LoggedIn");
+ // console.log(logged);
+ if (logged =="true"){
+ //  console.log("yes");
+  
+  
+  $(".ShowAvtar").show();
+  $(".sigbtn").hide();
+  $("#avtarsh").click(function(){
+   $(".Logout").toggle();
+   
+   $("#Dolog ").click(function(){
+     localStorage.setItem("LoggedIn",false);
+     $(".ShowAvtar").hide();
+  $(".sigbtn").show();
+   })
+  })
+ 
+ }
+ else{
+   $(".ShowAvtar").hide();
+   $(".sigbtn").show();
+ }
+ ///login
+ ///login
+ 
   </script>
  
 
