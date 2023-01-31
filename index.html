@@ -702,6 +702,9 @@
 
 
       </div>
+      <div class="Smallshow">
+        <img src="/images/JEETSM.png" alt="" srcset="">
+      </div>
     </div>
     <div class="recordedVedio">
       <h2 class="reCVedioTitle">
@@ -2116,6 +2119,9 @@ else{
       localStorage.setItem("LoggedIn",true);
       console.log("susscessfuly signup")
       $(".hideit").css("display","none");
+      
+      $(".hideit").removeClass("show");
+      location.reload();
     $(".ShowAvtar").show();
  $(".sigbtn").hide();
  $(".Logout").hide();
@@ -2172,6 +2178,8 @@ else{
    if(response.data["message:"]=="Successfull Login"){
     localStorage.setItem("LoggedIn",true);
     $(".hideit").css("display","none");
+    $(".hideit").removeClass("show");
+    location.reload();
     $(".ShowAvtar").show();
  $(".sigbtn").hide();
  $(".Logout").hide();
@@ -2222,7 +2230,7 @@ else{
   $(".ShowAvtar").hide();
   $(".sigbtn").show();
 }
-
+localStorage.setItem("SlelectedClass","12th Class Science")
 
   </script>
 </body>

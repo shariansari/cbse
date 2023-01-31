@@ -350,8 +350,15 @@ border-radius: 3px;
         justify-content: flex-end;
         position: relative;
     }
+  
     }
-
+    .Smallshow{
+        display: none;
+      
+    }
+    .Smallshow img{
+        width: 95%;
+    }
     .trendingBanner{
         padding: 10px 75px;
     }
@@ -533,8 +540,12 @@ border-radius: 3px;
 
 
 @media screen and (max-width:480px) {
+   
     .trendingBanner-img{
         display: none;
+    }
+    .Smallshow{
+        display: block ;
     }
     .courseCardimg{
         height: 103px !important;
