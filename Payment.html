@@ -522,6 +522,10 @@
       <div class="copyRight">Copyright ©2023 MarksChamp.com ( MarksChamp Pvt. Ltd.) | All Rights Reserved.</div>
     </div>
   </footer>
+  <!-- //razor -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- //razor -->
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -680,14 +684,19 @@ const jsondata = JSON.parse(localStorage.getItem("courses"));
 var data_filter = jsondata.filter( element => element.id ==`${getId}`)
 // console.log(data_filter[0]);
 getId && $("#AmountPay").attr("readonly",true);
-$("#AmountPay").val(`${data_filter[0].coursePrice-data_filter[0].courseDiscounts}`);
+if (getId){
+  $("#AmountPay").val(`${data_filter[0].coursePrice-data_filter[0].courseDiscounts}`);
  let StudentName=localStorage.getItem("StudentName");
  $("#StudentPay").val(`${StudentName}`)
+
+}
 
  
 ///payment
 
-$("#payDo").click(async function() {
+  
+
+$("#payDo").click(async function Razorpay() {
   const amount =$("#AmountPay").val();
 const Sname= $("#StudentPay").val();
 const Payemail=$("#EmailPay").val();
@@ -712,6 +721,82 @@ if(res){
     params.append("RazorPayGateway","RazorPayICICI");
 
     await axios.post(`https://api.markschamp.com/RazorPayPaymentTryingNotification`,params);
+    //////risk
+    const Options={key:"rzp_live_xAO8C7XW3z48kW",amount:parseInt(amount)*100,currency:"INR",
+    name:"Markschamp",
+    description:"Student Membership",image:"/images/Logos.png",order_id:OrderId1,
+    handler:async(ress)=>{
+      const {razorpay_signature,razorpay_order_id,razorpay_payment_id}=ress;
+      const params2=new URLSearchParams();
+      params2.append("orderId",OrderId1);
+      params2.append("razorPayPaymentId",razorpay_payment_id);
+      params2.append("razorPaySignature",razorpay_signature);
+      params2.append("RazorPayGateway","RazorPayICICI");
+      
+      const res1=await axios.post(`https://api.markschamp.com/RazorPaySignature`,params2)
+      if(res1.data.status.toLowerCase()==="verified"){
+        const obj={
+          paymentID:razorpay_payment_id,
+          name:Sname,
+          phone:Payphone,
+          amount:amount,
+          email:Payemail,
+          OrderID:razorpay_order_id
+        }
+        // setPayDetails(obj);
+        // setSuccessModal(true)
+    // passIng Values to our functions 
+    // Status mode On----------
+    // setDetails({
+    //   name:"",
+    //   phone:"",
+    //   email:"",
+    //   amount:"",
+    // })
+
+  }
+ },
+ prefill:{
+  name:Sname,
+  email:Payemail,
+  contact:Payphone,
+ },
+ notes:{
+  address:"Razorpay Corporate Office"
+ },
+ theme:{
+  color:"#297cba",
+ },
+
+  }
+  const paymentObject =window.Razorpay(Options);
+  paymentObject.open();
+// var options = {
+//     "key": "rzp_live_xAO8C7XW3z48kW",
+//     "amount": parseInt(amount)*100, // Example: 2000 paise = INR 20
+//     "name": "Markschamp",
+//     "description": "Student Membership",
+//     "image": "img/logo.png",// COMPANY LOGO
+//     "handler": function (response) {
+//         console.log(response);
+//         // AFTER TRANSACTION IS COMPLETE YOU WILL GET THE RESPONSE HERE.
+//     },
+//     "prefill": {
+//         "name": "ABC", // pass customer name
+//         "email": 'A@A.COM',// customer email
+//         "contact": '+919123456780' //customer phone no.
+//     },
+//     "notes": {
+//         "address": "address" //customer address 
+//     },
+//     "theme": {
+//         "color": "#15b8f3" // screen color
+//     }
+// };
+// console.log(options);
+// var propay = new Razorpay(options);
+// propay.open();
+//     //////risk
   }
 
 }
