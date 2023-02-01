@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -16,9 +16,8 @@
     href="https://fonts.googleapis.com/css2?family=Lato&family=Merienda:wght@300&family=Permanent+Marker&display=swap"
     rel="stylesheet">
 
-  <!-- slick slider -->
 
-  <!-- slider -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,7 +30,7 @@
 
   <title>Markschamp :Get Online Classes for Students by india best teacher</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- slider -->
+
 
 
   <link rel="stylesheet" href="style.css">
@@ -391,8 +390,7 @@
             </div>
           </div>
         </div>
-        <!-- <div style="color: black;padding: 20px;font-weight: 650;"> Free Live Classes</div> -->
-        <!-- <hr> -->
+ 
        <a href="Payment.html">
         <div style="color: black;padding: 20px;font-weight: 650;">Payment</div>
        </a>
@@ -681,7 +679,6 @@
 
 
 
-  <!-- //main -->
   <main>
     <div class="banner">
       <div class="bannerTagline">Get Online Classes for Students by India’s Best Teachers</div>
@@ -717,7 +714,7 @@
 
 
 
-      <!-- //tabs -->
+  
       <div style="display: flex;">
         <div class="class_10th">
           <div class="cls">10th Class</div>
@@ -726,7 +723,7 @@
           <div class ="cls">9th Class</div>
         </div>
       </div>
-      <!-- ///tabs -->
+
       <div class="container_Record">
 
         <div class="responsive">
@@ -740,13 +737,11 @@
 
 
 
-      <!-- ///tabs -->
-
 
     </div>
 
 
-    <!-- Button trigger modal -->
+
     <div class="modAl">
 
     </div>
@@ -976,11 +971,7 @@
     </div>
 
 
-    <!-- ///cbse modal  -->
-    <!-- Button trigger modal -->
-
-
-    <!-- Modal -->
+ 
     <div class="SelectCoure">
       <div class="modal fade" id="CoursesExample" tabindex="-1" role="dialog" aria-labelledby="CoursesExampleTitle"
         aria-hidden="true">
@@ -1024,7 +1015,7 @@
       </div>
     </div>
     
-<!-- Modal -->
+
 <div class="modal fade hideit " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -1035,7 +1026,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- ... -->
+      
         <section>
           <div class="container-fluid">
             <div class="row">
@@ -1049,10 +1040,7 @@
               </div>
               <div class="col-sm-6 text-black">
         
-                <!-- <div class="px-5 ms-xl-4">
-                  <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-                  <span class="h1 fw-bold mb-0">Logo</span>
-                </div> -->
+          
         
                 <div class="d-flex align-items-center h-custom-2 sm-12">
         
@@ -1120,7 +1108,7 @@
             </div>
           </div>
         </section>
-        <!-- ... -->
+   
       </div>
       
     </div>
@@ -1300,7 +1288,7 @@
   
 
       function Boards (Def ="10th Class") {
-        // console.log(Def,"hhh");
+
 
    
     
@@ -1311,7 +1299,6 @@
 
       }
       test().then((res) => {
-        // console.log(res, "vvv")
         const vedioDataCard = res;
         localStorage.setItem("demovedios", JSON.stringify(vedioDataCard));
         VedioClass10();
@@ -1323,17 +1310,7 @@
       let Cls9 ="9th Class"
       Boards(Cls9);
       $(".responsive").html("");
-      // location.reload();
      })
-    // const Cls =document.querySelectorAll(".cls");
-    // // console.log(Cls,"v");
-    // Array.from(Cls).forEach((cLaSS)=>{
-    //   cLaSS.addEventListener("click", (e)=>{
-    //     let Default =e.target.innerHTML;
-    //     console.log(Default,"ff");
-    //     Boards(Default);
-    //   })
-    // })
 
     
 
@@ -1437,8 +1414,6 @@
 
 
       let parenCon = document.querySelector(".parentContainer");
-      // console.log(parenCon);
-      //create card
 
       const cards = document.createElement("div");
       cards.classList = "cards";
@@ -1524,7 +1499,6 @@
         ]
       });
       $(".class_10th").click(function () {
-        // alert("hello iam");
         
         $(".class_10th").css({
           "background": "#297cba",
@@ -1590,12 +1564,11 @@
     async function VedioClass9() {
       const vedioCCCard9 = await JSON.parse(localStorage.getItem("demovedios9"));
 
-      // function VedioClass9 (){
-      //  console.log(vedioCCCard9,"vvvvvvvvvvvv");
+ 
       await vedioCCCard9.forEach((element) => {
 
         const doclass9 = document.querySelector(".class9");
-        // console.log(doclass9,"class9");
+   
         const card9 = document.createElement("div");
         card9.classList = "card";
         const class9data = `<img class="card-img-top" src="/images/videoBackground.jpg" alt="Card image cap">
@@ -1633,7 +1606,6 @@
       item.addEventListener("click", (e) => {
 
 
-        // openModal();
 
 
       });
@@ -1643,12 +1615,12 @@
     function openModal(src, id, topic) {
 
       const modAl = document.querySelector(".modAl");
-      console.log(modAl, "div");
+     
       const modalBOdy = document.createElement("div");
       modalBOdy.classList = "modalBOdy";
-      // console.log("src", src);
+    
       let link = src;
-      // console.log("Links", link);
+    
       const modaldiv = `<div class="modal fade" id="${'exampleModal' + id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content modC">
@@ -1719,7 +1691,6 @@
 
 
       const slickstudent = document.querySelector(".slickstudent")
-      // console.log(slickstudent,"slikstudent")
       const card = document.createElement("div");
       card.classList = "card";
       const student_Card = `
@@ -1813,7 +1784,6 @@
 
 
       const teacherSlick = document.querySelector(".teacherSlick");
-      // console.log(teacherSlick,"teacherslider");
       const rootcard = document.createElement("div");
       rootcard.classList = "rootcard";
 
@@ -1871,20 +1841,15 @@
     });
     $(".SelectRound").click(function () {
       const data = $(this).innerHTML;
-      // console.log(data, "dsdsd")
 
     })
     let SlectedClass ="12th Class Science";
     let Coursebtns = document.querySelectorAll(".classSelect");
-    // console.log(Coursebtns,"bbbbbbb");
     
     Array.from(Coursebtns).forEach((butoon,index) => {
       butoon.addEventListener('click', (e) => {
-        // butoon.classList.toggle("docolor");
         localStorage.setItem("Indices",index);
-        // console.log(localStorage.getItem("Indices")) 
         if(localStorage.getItem("Indices") == index){
-          // alert();
           let SlectedClass = e.target.innerHTML;
 
 localStorage.setItem("SlelectedClass", SlectedClass);
@@ -1900,13 +1865,11 @@ localStorage.setItem("SlelectedClass", SlectedClass);
 
       })
     });
-    //medium
     let MediumBtns =document.querySelectorAll(".Medium");
     Array.from(MediumBtns).forEach((medium,index)=>{
       medium.addEventListener("click",(e)=>{
         localStorage.setItem("Indices",index);
         if(localStorage.getItem("Indices") == index){
-          // alert();
         
 
           $(".Medium").removeClass("docolor");
@@ -1916,9 +1879,7 @@ localStorage.setItem("SlelectedClass", SlectedClass);
       })
 
     })
-    //medium
     let CouRse = document.querySelectorAll(".listLinks");
-    // console.log(CouRse,"ff");
     Array.from(CouRse).forEach((course) => {
       course.addEventListener("click", (e) => {
         let SelectedCourse = e.target.innerHTML;
@@ -1960,9 +1921,7 @@ else if (CallPhone.length!=10){
  else{
   axios.post("https://api.markschamp.com//studentbasic/bookFreeDemo",param)
   .then(function(response){
-    // console.log(response);
     if(response.data.message=='Successfully Saved.'){
-      // console.log("susscessfuly signup");
       $("#DemoShort").html("We will call you shortly...");
       setTimeout(() => {
     $("#DemoShort").html("");
@@ -1984,8 +1943,6 @@ else if (CallPhone.length!=10){
     })
 
  
-///buycourse modal
-//login & register 
 $(".register").click(function(){
  $(".Login").hide();
  $(".Register").show();
@@ -2109,11 +2066,8 @@ else if(Password.length>12){
 else{
   axios.post('https://api.markschamp.com//studentbasic/signup',param)
   .then(function (response) {
-    // console.log(response);
-    // console.log(response.data.message);
     if(response.data.message=='Successfully Saved.'){
       localStorage.setItem("LoggedIn",true);
-      // console.log("susscessfuly signup")
       $(".hideit").css("display","none");
       
       $(".hideit").removeClass("show");
@@ -2129,7 +2083,6 @@ else{
  
     
       
-      // window.location.href = `${location.origin}/Payment.html?id=${getId}`;
     }
   
 
@@ -2169,8 +2122,6 @@ if( CnfrmPhone ==="" && CnfrmPassword ===""){
 else{
  axios.post(' https://api.markschamp.com//studentbasic/loginPage',param)
  .then(function (response) {
-  //  console.log(response);
-  //  console.log(response.data);
    if(response.data["message:"]=="Successfull Login"){
     localStorage.setItem("LoggedIn",true);
     $(".hideit").css("display","none");
@@ -2204,9 +2155,7 @@ else{
 
 })
 let  logged =localStorage.getItem("LoggedIn");
-// console.log(logged);
 if (logged =="true"){
-//  console.log("yes");
  
  
  $(".ShowAvtar").show();

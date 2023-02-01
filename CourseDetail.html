@@ -1816,13 +1816,13 @@
 const windowUrl =window.location.href;
 var url = new URL(windowUrl);
 var getId = url.searchParams.get("id");
-console.log(getId)
+// console.log(getId)
 
  const jsondata = JSON.parse(localStorage.getItem("courses"));
- console.log(jsondata,"ffff")
+//  console.log(jsondata,"ffff")
 var data_filter = jsondata.filter( element => element.id ==`${getId}`)
 // console.log(data_filter[0].courseTitle)
-console.log(data_filter[0].courseTitle)
+// console.log(data_filter[0].courseTitle)
 //date
 const year =new Date().getFullYear();
 const Dates =new Date().getDate();
@@ -2018,8 +2018,8 @@ param.append("password",`${CnfrmPassword}`);
  else{
   axios.post(' https://api.markschamp.com//studentbasic/loginPage',param)
   .then(function (response) {
-    console.log(response);
-    console.log(response.data);
+    // console.log(response);
+    // console.log(response.data);
     if(response.data["message:"]=="Successfull Login"){
       // console.log("yes");
       localStorage.setItem("LoggedIn",true)
@@ -2444,7 +2444,7 @@ $(".sub").click(function(){
  let  logged =localStorage.getItem("LoggedIn");
  // console.log(logged);
  if (logged =="true"){
-  console.log("yes");
+  // console.log("yes");
   
   
   $(".ShowAvtar").show();

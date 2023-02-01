@@ -686,7 +686,7 @@
     
     <div class="PolicyBanner">
         <div><h1 class="PBTitle">Join the Learning Tribe, Time to Grow and Thrive</h1>
-            <button class="btn dd" style="background-color: white;color: black;width: auto;padding:5px 20px;">Learn More</button>
+            <button class="btn dd" style="background-color: white;color: black;width: auto;padding:5px 20px;"data-toggle="modal"data-target="#DemoBook">Learn More</button>
         </div>
         
         <div class="PBImg">
@@ -707,7 +707,7 @@
                 </div>
                 <div class="careerTCR">Teacher</div>
                 <div class="CareerTitle">Be a Teacher at MarksChamp</div>
-                <div class="Apply">Apply now</div>
+                <div class="Apply"data-toggle="modal"data-target="#DemoBook">Apply now</div>
             </div>
             <div class="CareerCR">
                 <div class="CarrerIMG">
@@ -715,7 +715,7 @@
                 </div>
                 <div class="careerTCR">Frontend developer</div>
                 <div class="CareerTitle">Be a Frotend developer at MarksChamp</div>
-                <div class="Apply">Apply now</div>
+                <div class="Apply"data-toggle="modal"data-target="#DemoBook">Apply now</div>
             </div>
             <div class="CareerCR">
                 <div class="CarrerIMG">
@@ -723,7 +723,7 @@
                 </div>
                 <div class="careerTCR">Backend developer</div>
                 <div class="CareerTitle">Be a Backend developer at MarksChamp</div>
-                <div class="Apply">Apply now</div>
+                <div class="Apply"data-toggle="modal"data-target="#DemoBook">Apply now</div>
             </div>
             <div class="CareerCR">
                 <div class="CarrerIMG">
@@ -731,7 +731,7 @@
                 </div>
                 <div class="careerTCR">Android developer</div>
                 <div class="CareerTitle">Be a Android developer at MarksChamp</div>
-                <div class="Apply">Apply now</div>
+                <div class="Apply"data-toggle="modal"data-target="#DemoBook">Apply now</div>
             </div>
         </div>
        </div>
@@ -744,7 +744,56 @@
         </div>
       </div>
     
-  
+      <div class="modal fade" id="DemoBook" tabindex="-1" role="dialog" aria-labelledby="DemoBookTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="border: 0px;">
+              <div class="modal-title" id="exampleModalLongTitle"><img src="/images/Logo.jpg" height="40px" alt=""></div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="padding-bottom: 2px;">
+              <form>
+                <div class="form-group">
+                 <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name" style="height: 50px;">
+                </div>
+                  <div style="color: red;margin-left: 22px;font-size: 13px;" class="NameTAr"></div>
+                </div>
+                <div class="form-group">
+                  <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-telephone-fill" style="font-size: 18px; color: #297CBA;"></i></label>
+                   <input type="number" maxlength="10" class="form-control" id="exampleFormControlInput2" placeholder="Enter your phone number." style="height: 50px;"></div>
+                   <div style="color: red;margin-left: 22px; font-size: 13px;" class="NumberTAr"></div>
+                 </div>
+                
+                <div class="form-group">
+                  <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-layers-half" style="color: #297CBA;margin-right:10px;font-size: 18px;"></i></div><select class="form-control" id="exampleFormControlSelect1" style="height: 50px;">
+                    <option>Android Developer</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Teacher</option>
+                  
+                    
+                  
+                    
+                   
+                  
+                  </select></div>
+                </div>
+                <div class="SubmittedSus" style="text-align: center;color: lightgreen;"></div>
+                
+               
+              </form>
+            </div>
+            <div class="modal-footer" style="border: 0px;display: flex;align-items: center;justify-content: center;">
+              <button type="button" class="btn dd" data-dismiss="modal" style="background-color: rgb(165, 143, 150);width: unset;">Close</button>
+              <button type="submit" class="btn dd sub" style="width: unset;">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
 
     <!-- Button trigger modal -->
@@ -1708,7 +1757,55 @@ else{
   $(".ShowAvtar").hide();
   $(".sigbtn").show();
 }
-localStorage.setItem("SlelectedClass","12th Class Science")
+
+$(".sub").click(function(){
+  
+  let Name = $("#exampleFormControlInput1").val()
+  let Phoneno =$("#exampleFormControlInput2").val();
+  let ClassesBook =$("#exampleFormControlSelect1").val();
+ 
+  if(Name === "" ||Phoneno ===""){
+   $(".NameTAr").html("Fields Can't be empty *")
+     $(".NumberTAr").html("Fields Can't be empty *")
+           
+   setTimeout(() => {
+     $(".NameTAr").html("")
+     $(".NumberTAr").html("")
+         }, 2500);
+ 
+  }
+  if(Phoneno.length!=10){
+   $(".NumberTAr").html("Please Enter Valid no *")
+   setTimeout(() => {
+     $(".NameTAr").html("")
+     $(".NumberTAr").html("")
+         }, 2500);
+  }
+ 
+  
+ const param =new URLSearchParams()
+ param.append("studentsName",`${Name}`);
+ param.append("phoneNo",`${Phoneno}`);
+ param.append("classes",`${ClassesBook}`);
+ 
+ 
+ axios.post('https://api.markschamp.com//studentbasic/bookFreeDemo',param)
+   .then(function (response) {
+     // console.log(response);
+     // alert("we will call you Shortly....")
+     $(".SubmittedSus").html("We will call you shortly....");
+     setTimeout(() => {
+     $("#exampleFormControlInput1").val("");
+     $("#exampleFormControlInput2").val("");
+     $(".SubmittedSus").html("");
+         }, 2500);
+   })
+   .catch(function (error) {
+     // console.log(error);
+   });
+ 
+ })
+ 
 
   </script>
 </body>
