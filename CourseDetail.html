@@ -1028,6 +1028,49 @@
   </div>
 </div>
  <!-- ///// -->
+  <!-- Modal -->
+  <div class="SelectCoure">
+    <div class="modal fade" id="CoursesExample" tabindex="-1" role="dialog" aria-labelledby="CoursesExampleTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLongTitle" style="font-size: 21px;">Select Class</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="LyerOption">
+              <div class="SelectRound classSelect docolor">12th Class Science</div>
+              <div class="SelectRound classSelect">12th Class Commerce</div>
+              <div class="SelectRound classSelect">11th Class Science</div>
+              <div class="SelectRound classSelect">11th Class Commerce</div>
+              <div class="SelectRound classSelect">10th Class</div>
+              <div class="SelectRound classSelect">9th Class</div>
+            </div>
+
+            <div class="SelctLayerOption">
+              <h3 class="SelectLayerTitle">Select Medium</h3>
+            </div>
+            <div class="LyerOption">
+              <div class="SelectRound Medium docolor" >English</div>
+              <div class="SelectRound Medium">Hindi</div>
+              <div class="SelectRound Medium">Hinglish</div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn dd" data-dismiss="modal" style="width: unset;background-color:rgb(165, 143, 150) ;" >Close</button>
+            <a href="/Boards.html" style="text-decoration: none;"> <button type="button" class="btn dd"
+                style="width: unset;">View Course</button>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
  <!-- buyCoursemodal -->
  <!-- Button trigger modal -->
 
@@ -1272,22 +1315,27 @@
         <div class="list3">
           <h3 class="list1title">State boards</h3>
           <div class="listItem">
-            <a style="color: white;" class="list_Links">CBSE BOARDS</a>
+            <a style="color: white;" class="listLinks" data-toggle="modal" data-target="#CoursesExample">CBSE
+              Board</a>
           </div>
           <div class="listItem">
-            <a style="color: white;" class="list_Links">ICSE BOARDS</a>
+            <a style="color: white;" class="listLinks"  data-toggle="modal" data-target="#CoursesExample">ICSE
+              Board</a>
           </div>
           <div class="listItem">
-            <a style="color: white;" class="list_Links">MCSE BOARDS</a>
+            <a style="color: white;" class="listLinks" data-toggle="modal" data-target="#CoursesExample">MCSE Board</a>
           </div>
           <div class="listItem">
-            <a style="color: white;" class="list_Links">MPSE BOARDS</a>
+            <a style="color: white;" class="listLinks" data-toggle="modal" data-target="#CoursesExample">MPSE
+              Board</a>
           </div>
           <div class="listItem">
-            <a style="color: white !important;" class="list_Links">ICCE BOARDS</a>
+            <a style="color: white !important;" class="listLinks " data-toggle="modal"
+              data-target="#CoursesExample">ICCE Board</a>
           </div>
           <div class="listItem">
-            <a style="color: white !important;" class="list_Links">JCSE BOARDS</a>
+            <a style="color: white !important;" class="listLinks" data-toggle="modal" data-target="#CoursesExample">JCSE
+              Board</a>
           </div>
 
         </div>
@@ -1329,6 +1377,7 @@
       <div class="copyRight">Copyright ©2023 MarksChamp.com ( MarksChamp Pvt. Ltd.) | All Rights Reserved.</div>
     </div>
   </footer>
+
 
 
   <!-- Optional JavaScript -->
@@ -1767,12 +1816,13 @@
 const windowUrl =window.location.href;
 var url = new URL(windowUrl);
 var getId = url.searchParams.get("id");
-// console.log(getId)
+console.log(getId)
 
  const jsondata = JSON.parse(localStorage.getItem("courses"));
-//  console.log(jsondata)
+ console.log(jsondata,"ffff")
 var data_filter = jsondata.filter( element => element.id ==`${getId}`)
 // console.log(data_filter[0].courseTitle)
+console.log(data_filter[0].courseTitle)
 //date
 const year =new Date().getFullYear();
 const Dates =new Date().getDate();
@@ -2394,7 +2444,7 @@ $(".sub").click(function(){
  let  logged =localStorage.getItem("LoggedIn");
  // console.log(logged);
  if (logged =="true"){
- //  console.log("yes");
+  console.log("yes");
   
   
   $(".ShowAvtar").show();
