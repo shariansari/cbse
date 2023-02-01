@@ -816,6 +816,55 @@
 
 
     <!-- ///cbse modal  -->
+    <div class="modal fade" id="DemoBook" tabindex="-1" role="dialog" aria-labelledby="DemoBookTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border: 0px;">
+            <div class="modal-title" id="exampleModalLongTitle"><img src="/images/Logo.jpg" height="40px" alt=""></div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="padding-bottom: 2px;">
+            <form>
+              <div class="form-group">
+               <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-people-fill" style="color: #297CBA;"></i></label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name" style="height: 50px;">
+              </div>
+                <div style="color: red;margin-left: 22px;font-size: 13px;" class="NameTAr"></div>
+              </div>
+              <div class="form-group">
+                <div style="display: flex;"> <label for="exampleFormControlInput1" style="display: flex;align-items: center;justify-content: center;margin-right: 10px;"><i class="bi bi-telephone-fill" style="font-size: 18px; color: #297CBA;"></i></label>
+                 <input type="number" maxlength="10" class="form-control" id="exampleFormControlInput2" placeholder="Enter your phone number." style="height: 50px;"></div>
+                 <div style="color: red;margin-left: 22px; font-size: 13px;" class="NumberTAr"></div>
+               </div>
+              
+              <div class="form-group">
+                <div style="display: flex;"><div style="display: flex;align-items: center;justify-content: center;"><i class="bi bi-book-half" style="color: #297CBA;font-size: 18px;margin-right: 10px;"></i></div><select class="form-control" id="exampleFormControlSelect1" style="height: 50px;">
+                  <option>12th Class Science</option>
+                  <option>12th Class Commerce</option>
+                  <option>12th Humanities (Arts)</option>
+                  <option>11th Class Science</option>
+                  <option>11th Class Commerce</option>
+                  <option>11th Humanities (Arts)</option>
+                  <option>10th Class</option>
+                  <option>9th Class</option>
+                  <option>Jee Mains</option>
+                  <option>Neet</option>
+                </select></div>
+              </div>
+              <div class="SubmittedSus" style="text-align: center;color: lightgreen;"></div>
+              
+             
+            </form>
+          </div>
+          <div class="modal-footer" style="border: 0px;display: flex;align-items: center;justify-content: center;">
+            <button type="button" class="btn dd" data-dismiss="modal" style="background-color: rgb(165, 143, 150);width: unset;">Close</button>
+            <button type="submit" class="btn dd sub" style="width: unset;">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Button trigger modal -->
 
 
@@ -1166,6 +1215,8 @@ async function Commerce12 () {
       }
       Commerce12().then((respons)=>{
         const course12commerce = respons;
+        localStorage.setItem("courses", JSON.stringify(course12commerce));
+
         class12CommerceCbse(course12commerce);
 
       })
@@ -1747,6 +1798,55 @@ async function Commerce12 () {
 
 //       ]
 //     });
+
+$(".sub").click(function(){
+  
+  let Name = $("#exampleFormControlInput1").val()
+  let Phoneno =$("#exampleFormControlInput2").val();
+  let ClassesBook =$("#exampleFormControlSelect1").val();
+ 
+  if(Name === "" ||Phoneno ===""){
+   $(".NameTAr").html("Fields Can't be empty *")
+     $(".NumberTAr").html("Fields Can't be empty *")
+           
+   setTimeout(() => {
+     $(".NameTAr").html("")
+     $(".NumberTAr").html("")
+         }, 2500);
+ 
+  }
+  if(Phoneno.length!=10){
+   $(".NumberTAr").html("Please Enter Valid no *")
+   setTimeout(() => {
+     $(".NameTAr").html("")
+     $(".NumberTAr").html("")
+         }, 2500);
+  }
+ 
+  
+ const param =new URLSearchParams()
+ param.append("studentsName",`${Name}`);
+ param.append("phoneNo",`${Phoneno}`);
+ param.append("classes",`${ClassesBook}`);
+ 
+ 
+ axios.post('https://api.markschamp.com//studentbasic/bookFreeDemo',param)
+   .then(function (response) {
+     // console.log(response);
+     // alert("we will call you Shortly....")
+     $(".SubmittedSus").html("We will call you shortly....");
+     setTimeout(() => {
+     $("#exampleFormControlInput1").val("");
+     $("#exampleFormControlInput2").val("");
+     $(".SubmittedSus").html("");
+         }, 2500);
+   })
+   .catch(function (error) {
+     // console.log(error);
+   });
+ 
+ })
+ ///login
     $(".SelectRound").click(function () {
       const data = $(this).innerHTML;
       // console.log(data, "dsdsd")
@@ -2132,7 +2232,7 @@ const detailCourseData =`
           </div>
           <div class="courseDetailLeftUpper">
               <div class="Detailbtn">
-                  <button class="btn dd vc">Book Free Demo</button>
+                  <button class="btn dd vc"data-toggle="modal"data-target="#DemoBook">Book Free Demo</button>
               </div>
           </div>
       </div>

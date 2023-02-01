@@ -686,8 +686,7 @@
     <div class="LongTermdiv">
         <div class="LongLeft">
             <h2 class="LongTitle">Join Target Exams</h2>
-            <div class="LongSubtitle">Get a Benefit to take Target Exams From Our Best Tutors
-            </div>
+            <div class="LongSubtitle">Get a Benefit to take Target Exams From Our Best Tutors</div>
             <div class="LongLearnmore">
                 <button class="btn dd bn"data-toggle="modal"data-target="#DemoBook">LEARN MORE</button>
             </div>
@@ -718,22 +717,20 @@
                 </div>
             </div>
         </div>
-       
+        <div class="Recheading">
+            <h2 class="Rectagline">Recommended Course</h2>
+            <hr style="border-top: 2px dashed;">
+            <div class="CourseTitleLong">One-to-one Live Classes</div>
+            <div class="courseDesc">Long Term Courses Specially Design For Thos Students Who Want To Score 100 out of 100 in their Academics.MarksChamp Promise To help to acheive Students Goal.</div>
+            <div class="RecCourseCard"></div>
+        </div>
         </div>
     
         <!-- //vediocard -->
         
         <!-- //vediocard -->
     
-   
-    <div class="Recheading">
-        <h2 class="Rectagline">Recommended Course</h2>
-        <hr style="border-top: 2px dashed;">
-        <div class="CourseTitleLong">One-to-one Live Classes</div>
-        <div class="courseDesc">Long Term Courses Specially Design For Thos Students Who Want To Score 100 out of 100 in their Academics.MarksChamp Promise To help to acheive Students Goal.</div>
-        <div class="RecCourseCard"></div>
     </div>
-</div>
    
    
     <div class="recordedVedio">
@@ -2101,18 +2098,18 @@ const LongData =[
     {
         course:"IIT JEE Full Year Course",
         classes:"For Classes 11th,12th",
-        src:"/images/lgcourse.png"
+        src:"/images/lgcourse.png",
+        link:"JEEmains.html",
+        modal:""
     },
     {
         course:"NEET Full Year Course",
         classes:"For Classes 11th,12th",
-        src:"/images/lgcourse1.png"
+        src:"/images/lgcourse1.png",
+        link:"NEET.html",
+        modal:"",
     },
-    {
-        course:"All Boards Full Year Course",
-        classes:"For Classes 9th to 12th",
-        src:"/images/lgcourse2.png"
-    }
+    
 ]
 LongData.forEach((long,id)=>{
 
@@ -2129,8 +2126,8 @@ const LongCArd =`
     <h5 class="card-title"><h4 style="text-align:center;color:black;font-size:22px;font-weight:600" class ="Longcou">${long.course}</h4></h5>
     <p class="card-text" style="text-align:center;color:grey">${long.classes}</p>
     <div style="display:flex;align-items:center;justify-content:space-between" class="doColumn">
-    <button class="btn dd" style="width:auto">BOOK A DEMO</button>
-    <button class="btn dd" style="width:auto">VIEW COURSE</button>
+    <button class="btn dd" style="width:auto"data-toggle="modal"data-target="#DemoBook">BOOK A DEMO</button>
+   <a href=${long.link} data-toggle="${long.modal}"data-target="#CoursesExample" style="text-decoration:none"> <button class="btn dd" style="width:auto">VIEW COURSE</button></a>
     </div>
   </div>
 </div>
@@ -2145,17 +2142,23 @@ const RecLongData =[
     {
         course:"IIT JEE Full Year Course",
         classes:"For Classes 11th,12th",
-        src:"/images/lgcourse.png"
+        src:"/images/lgcourse.png",
+        link:"JEEmains.html",
+        modal:""
     },
     {
         course:"NEET Full Year Course",
         classes:"For Classes 11th,12th",
-        src:"/images/lgcourse1.png"
+        src:"/images/lgcourse1.png",
+        link:"NEET.html",
+        modal:"",
     },
     {
         course:"All Boards Full Year Course",
         classes:"For Classes 9th to 12th",
-        src:"/images/lgcourse2.png"
+        src:"/images/lgcourse2.png",
+        link:"#",
+        modal:"modal",
     }
 ]
 RecLongData.forEach((long,id)=>{
@@ -2173,8 +2176,8 @@ const RecCArd =`
     <h5 class="card-title"><h4 style="text-align:center;color:black;font-size:22px;font-weight:600" class ="Longcou">${long.course}</h4></h5>
     <p class="card-text" style="text-align:center;color:grey">${long.classes}</p>
     <div style="display:flex;align-items:center;justify-content:space-between" class="doColumn">
-    <button class="btn dd" style="width:auto">BOOK A DEMO</button>
-    <button class="btn dd" style="width:auto">VIEW COURSE</button>
+    <button class="btn dd" style="width:auto"data-toggle="modal"data-target="#DemoBook">BOOK A DEMO</button>
+    <a href=${long.link} data-toggle="${long.modal}"data-target="#CoursesExample" style="text-decoration:none"> <button class="btn dd" style="width:auto">VIEW COURSE</button></a>
     </div>
   </div>
 </div>
